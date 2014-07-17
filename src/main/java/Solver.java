@@ -2,6 +2,7 @@ import config.Category;
 import config.Operation;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Solver {
 
@@ -10,6 +11,7 @@ public class Solver {
     public int a, b, c, d;
 
     public ArrayList<Node> solutions2x2;
+    public ArrayList<Node> solutions3x1;
 
     public boolean solve(int a, int b, int c, int d){
         //create base
@@ -22,11 +24,62 @@ public class Solver {
         createPairNodes();
 
         calculate2x2();
-
+        calculate3x1();
         Node sol = findSolution();
         System.out.println(sol.getEq());
 
         return sol != null;
+    }
+
+    private void calculate3x1() {
+        solutions3x1 = new ArrayList<Node>();
+
+        HashMap<Category, Integer[]> map = new HashMap<Category, Integer[]>();
+        map.put(Category.GROUP_A, new Integer[]{2, 3});
+        map.put(Category.GROUP_B, new Integer[]{1, 3});
+        map.put(Category.GROUP_C, new Integer[]{1, 2});
+        map.put(Category.GROUP_D, new Integer[]{0, 3});
+        map.put(Category.GROUP_E, new Integer[]{0, 2});
+        map.put(Category.GROUP_F, new Integer[]{0, 1});
+
+        for (Node node : pairNodes) {
+            Integer[] vals = map.get(node.group);
+            //forward
+            ArrayList<Node> temp = new ArrayList<Node>();
+            temp.add(new Node(node, baseNodes.get(vals[0]), Operation.ADD, null));
+            temp.add(new Node(node, baseNodes.get(vals[0]), Operation.SUBTRACT, null));
+            temp.add(new Node(baseNodes.get(vals[0]), node, Operation.SUBTRACT, null));
+            temp.add(new Node(node, baseNodes.get(vals[0]), Operation.MULTIPLY, null));
+            temp.add(new Node(node, baseNodes.get(vals[0]), Operation.DIVIDE, null));
+            temp.add(new Node(baseNodes.get(vals[0]), node, Operation.DIVIDE, null));
+
+            for (Node three : temp) {
+                solutions3x1.add(new Node(three, baseNodes.get(vals[1]), Operation.ADD, null));
+                solutions3x1.add(new Node(three, baseNodes.get(vals[1]), Operation.SUBTRACT, null));
+                solutions3x1.add(new Node(baseNodes.get(vals[1]), three, Operation.SUBTRACT, null));
+                solutions3x1.add(new Node(three, baseNodes.get(vals[1]), Operation.MULTIPLY, null));
+                solutions3x1.add(new Node(three, baseNodes.get(vals[1]), Operation.DIVIDE, null));
+                solutions3x1.add(new Node(baseNodes.get(vals[1]), three, Operation.DIVIDE, null));
+            }
+
+            //backward
+            temp = new ArrayList<Node>();
+            temp.add(new Node(node, baseNodes.get(vals[1]), Operation.ADD, null));
+            temp.add(new Node(node, baseNodes.get(vals[1]), Operation.SUBTRACT, null));
+            temp.add(new Node(baseNodes.get(vals[1]), node, Operation.SUBTRACT, null));
+            temp.add(new Node(node, baseNodes.get(vals[1]), Operation.MULTIPLY, null));
+            temp.add(new Node(node, baseNodes.get(vals[1]), Operation.DIVIDE, null));
+            temp.add(new Node(baseNodes.get(vals[1]), node, Operation.DIVIDE, null));
+
+            for (Node three : temp) {
+                solutions3x1.add(new Node(three, baseNodes.get(vals[0]), Operation.ADD, null));
+                solutions3x1.add(new Node(three, baseNodes.get(vals[0]), Operation.SUBTRACT, null));
+                solutions3x1.add(new Node(baseNodes.get(vals[0]), three, Operation.SUBTRACT, null));
+                solutions3x1.add(new Node(three, baseNodes.get(vals[0]), Operation.MULTIPLY, null));
+                solutions3x1.add(new Node(three, baseNodes.get(vals[0]), Operation.DIVIDE, null));
+                solutions3x1.add(new Node(baseNodes.get(vals[0]), three, Operation.DIVIDE, null));
+            }
+        }
     }
 
     private void calculate2x2() {
@@ -65,14 +118,20 @@ public class Solver {
             }
         }
 
-/*        System.out.println(pairNodes.size());
+        System.out.println(pairNodes.size());
         for (Node n : pairNodes) {
             n.printNode();
-        }*/
+        }
     }
 
     private Node findSolution() {
         for (Node n : solutions2x2) {
+            if ((int) n.base == 24) {
+                return n;
+            }
+        }
+
+        for (Node n : solutions3x1) {
             if ((int) n.base == 24) {
                 return n;
             }

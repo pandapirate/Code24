@@ -40,7 +40,7 @@ public class Node {
         if (A == null && B == null)
             return base + "";
         else
-            return A.getEq() + " " + translateOp() + " " + B.getEq();
+            return "(" + A.getEq() + " " + translateOp() + " " + B.getEq() + ")";
     }
 
     private String translateOp() {
