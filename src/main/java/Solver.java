@@ -2,6 +2,7 @@ import config.Category;
 import config.Operation;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 
 public class Solver {
@@ -48,39 +49,17 @@ public class Solver {
         for (Node node : pairNodes) {
             Integer[] vals = map.get(node.group);
             //forward
-            ArrayList<Node> temp = new ArrayList<Node>();
-            temp.add(new Node(node, baseNodes.get(vals[0]), Operation.ADD, null));
-            temp.add(new Node(node, baseNodes.get(vals[0]), Operation.SUBTRACT, null));
-            temp.add(new Node(baseNodes.get(vals[0]), node, Operation.SUBTRACT, null));
-            temp.add(new Node(node, baseNodes.get(vals[0]), Operation.MULTIPLY, null));
-            temp.add(new Node(node, baseNodes.get(vals[0]), Operation.DIVIDE, null));
-            temp.add(new Node(baseNodes.get(vals[0]), node, Operation.DIVIDE, null));
+            ArrayList<Node> temp = new ArrayList<Node>(performOperations(node, baseNodes.get(vals[0]), null));
 
             for (Node three : temp) {
-                solutions3x1.add(new Node(three, baseNodes.get(vals[1]), Operation.ADD, null));
-                solutions3x1.add(new Node(three, baseNodes.get(vals[1]), Operation.SUBTRACT, null));
-                solutions3x1.add(new Node(baseNodes.get(vals[1]), three, Operation.SUBTRACT, null));
-                solutions3x1.add(new Node(three, baseNodes.get(vals[1]), Operation.MULTIPLY, null));
-                solutions3x1.add(new Node(three, baseNodes.get(vals[1]), Operation.DIVIDE, null));
-                solutions3x1.add(new Node(baseNodes.get(vals[1]), three, Operation.DIVIDE, null));
+                solutions3x1.addAll(performOperations(three, baseNodes.get(vals[1]), null));
             }
 
             //backward
-            temp = new ArrayList<Node>();
-            temp.add(new Node(node, baseNodes.get(vals[1]), Operation.ADD, null));
-            temp.add(new Node(node, baseNodes.get(vals[1]), Operation.SUBTRACT, null));
-            temp.add(new Node(baseNodes.get(vals[1]), node, Operation.SUBTRACT, null));
-            temp.add(new Node(node, baseNodes.get(vals[1]), Operation.MULTIPLY, null));
-            temp.add(new Node(node, baseNodes.get(vals[1]), Operation.DIVIDE, null));
-            temp.add(new Node(baseNodes.get(vals[1]), node, Operation.DIVIDE, null));
+            temp = new ArrayList<Node>(performOperations(node, baseNodes.get(vals[1]), null));
 
             for (Node three : temp) {
-                solutions3x1.add(new Node(three, baseNodes.get(vals[0]), Operation.ADD, null));
-                solutions3x1.add(new Node(three, baseNodes.get(vals[0]), Operation.SUBTRACT, null));
-                solutions3x1.add(new Node(baseNodes.get(vals[0]), three, Operation.SUBTRACT, null));
-                solutions3x1.add(new Node(three, baseNodes.get(vals[0]), Operation.MULTIPLY, null));
-                solutions3x1.add(new Node(three, baseNodes.get(vals[0]), Operation.DIVIDE, null));
-                solutions3x1.add(new Node(baseNodes.get(vals[0]), three, Operation.DIVIDE, null));
+                solutions3x1.addAll(performOperations(three, baseNodes.get(vals[0]), null));
             }
         }
     }
@@ -91,42 +70,21 @@ public class Solver {
         // a to f
         for (int i = 0; i < 6; i++) {
             for (int j = 30; j < 36; j++) {
-                Node a = pairNodes.get(i);
-                Node b = pairNodes.get(j);
-                solutions2x2.add(new Node(a, b, Operation.ADD, null));
-                solutions2x2.add(new Node(a, b, Operation.SUBTRACT, null));
-                solutions2x2.add(new Node(b, a, Operation.SUBTRACT, null));
-                solutions2x2.add(new Node(a, b, Operation.MULTIPLY, null));
-                solutions2x2.add(new Node(a, b, Operation.DIVIDE, null));
-                solutions2x2.add(new Node(b, a, Operation.DIVIDE, null));
+                solutions2x2.addAll(performOperations(pairNodes.get(i), pairNodes.get(j), null));
             }
         }
 
         //b to e
         for (int i = 6; i < 12; i++) {
             for (int j = 24; j < 30; j++) {
-                Node a = pairNodes.get(i);
-                Node b = pairNodes.get(j);
-                solutions2x2.add(new Node(a, b, Operation.ADD, null));
-                solutions2x2.add(new Node(a, b, Operation.SUBTRACT, null));
-                solutions2x2.add(new Node(b, a, Operation.SUBTRACT, null));
-                solutions2x2.add(new Node(a, b, Operation.MULTIPLY, null));
-                solutions2x2.add(new Node(a, b, Operation.DIVIDE, null));
-                solutions2x2.add(new Node(b, a, Operation.DIVIDE, null));
+                solutions2x2.addAll(performOperations(pairNodes.get(i), pairNodes.get(j), null));
             }
         }
 
         //c to d
         for (int i = 12; i < 18; i++) {
             for (int j = 18; j < 24; j++) {
-                Node a = pairNodes.get(i);
-                Node b = pairNodes.get(j);
-                solutions2x2.add(new Node(a, b, Operation.ADD, null));
-                solutions2x2.add(new Node(a, b, Operation.SUBTRACT, null));
-                solutions2x2.add(new Node(b, a, Operation.SUBTRACT, null));
-                solutions2x2.add(new Node(a, b, Operation.MULTIPLY, null));
-                solutions2x2.add(new Node(a, b, Operation.DIVIDE, null));
-                solutions2x2.add(new Node(b, a, Operation.DIVIDE, null));
+                solutions2x2.addAll(performOperations(pairNodes.get(i), pairNodes.get(j), null));
             }
         }
 
@@ -138,15 +96,7 @@ public class Solver {
         int counter = 1;
         for (int i = 0; i < 3; i++) {
             for (int j = i+1; j < 4; j++) {
-                Node aa = baseNodes.get(i);
-                Node bb = baseNodes.get(j);
-                pairNodes.add(new Node(aa, bb, Operation.ADD, getCat(counter)));
-                pairNodes.add(new Node(aa, bb, Operation.SUBTRACT, getCat(counter)));
-                pairNodes.add(new Node(bb, aa, Operation.SUBTRACT, getCat(counter)));
-                pairNodes.add(new Node(aa, bb, Operation.MULTIPLY, getCat(counter)));
-                pairNodes.add(new Node(aa, bb, Operation.DIVIDE, getCat(counter)));
-                pairNodes.add(new Node(bb, aa, Operation.DIVIDE, getCat(counter)));
-                counter++;
+                pairNodes.addAll(performOperations(baseNodes.get(i), baseNodes.get(j), getCat(counter++)));
             }
         }
 
@@ -154,6 +104,17 @@ public class Solver {
 //        for (Node n : pairNodes) {
 //            n.printNode();
 //        }
+    }
+
+    private ArrayList<Node> performOperations(Node a, Node b, Category group) {
+        ArrayList<Node> temp = new ArrayList<Node>();
+        temp.add(new Node(a, b, Operation.ADD, group));
+        temp.add(new Node(a, b, Operation.SUBTRACT, group));
+        temp.add(new Node(b, a, Operation.SUBTRACT, group));
+        temp.add(new Node(a, b, Operation.MULTIPLY, group));
+        temp.add(new Node(a, b, Operation.DIVIDE, group));
+        temp.add(new Node(b, a, Operation.DIVIDE, group));
+        return temp;
     }
 
     private Node findSolution() {
