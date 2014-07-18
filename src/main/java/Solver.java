@@ -26,8 +26,8 @@ public class Solver {
         calculate2x2();
         calculate3x1();
         Node sol = findSolution();
-        System.out.println(sol.getEq());
-
+//        System.out.println(sol.getEq());
+        sol.printNode();
         return sol != null;
     }
 
@@ -85,43 +85,72 @@ public class Solver {
     private void calculate2x2() {
         solutions2x2 = new ArrayList<Node>();
 
-        for (int i = 0; i < 30; i++) {
-            for (int j = i+1; j < 36; j++) {
+        // a to f
+        for (int i = 0; i < 6; i++) {
+            for (int j = 30; j < 36; j++) {
                 Node a = pairNodes.get(i);
                 Node b = pairNodes.get(j);
-                if (a.group == b.group) {
-                    continue;
-                } else {
-                    solutions2x2.add(new Node(a, b, Operation.ADD, null));
-                    solutions2x2.add(new Node(a, b, Operation.SUBTRACT, null));
-                    solutions2x2.add(new Node(b, a, Operation.SUBTRACT, null));
-                    solutions2x2.add(new Node(a, b, Operation.MULTIPLY, null));
-                    solutions2x2.add(new Node(a, b, Operation.DIVIDE, null));
-                    solutions2x2.add(new Node(b, a, Operation.DIVIDE, null));
-                }
+                solutions2x2.add(new Node(a, b, Operation.ADD, null));
+                solutions2x2.add(new Node(a, b, Operation.SUBTRACT, null));
+                solutions2x2.add(new Node(b, a, Operation.SUBTRACT, null));
+                solutions2x2.add(new Node(a, b, Operation.MULTIPLY, null));
+                solutions2x2.add(new Node(a, b, Operation.DIVIDE, null));
+                solutions2x2.add(new Node(b, a, Operation.DIVIDE, null));
             }
         }
+
+        //b to e
+        for (int i = 6; i < 12; i++) {
+            for (int j = 24; j < 30; j++) {
+                Node a = pairNodes.get(i);
+                Node b = pairNodes.get(j);
+                solutions2x2.add(new Node(a, b, Operation.ADD, null));
+                solutions2x2.add(new Node(a, b, Operation.SUBTRACT, null));
+                solutions2x2.add(new Node(b, a, Operation.SUBTRACT, null));
+                solutions2x2.add(new Node(a, b, Operation.MULTIPLY, null));
+                solutions2x2.add(new Node(a, b, Operation.DIVIDE, null));
+                solutions2x2.add(new Node(b, a, Operation.DIVIDE, null));
+            }
+        }
+
+        //c to d
+        for (int i = 12; i < 18; i++) {
+            for (int j = 18; j < 24; j++) {
+                Node a = pairNodes.get(i);
+                Node b = pairNodes.get(j);
+                solutions2x2.add(new Node(a, b, Operation.ADD, null));
+                solutions2x2.add(new Node(a, b, Operation.SUBTRACT, null));
+                solutions2x2.add(new Node(b, a, Operation.SUBTRACT, null));
+                solutions2x2.add(new Node(a, b, Operation.MULTIPLY, null));
+                solutions2x2.add(new Node(a, b, Operation.DIVIDE, null));
+                solutions2x2.add(new Node(b, a, Operation.DIVIDE, null));
+            }
+        }
+
+//        System.out.println(solutions2x2.size());
     }
 
     private void createPairNodes() {
         pairNodes = new ArrayList<Node>();
+        int counter = 1;
         for (int i = 0; i < 3; i++) {
             for (int j = i+1; j < 4; j++) {
                 Node aa = baseNodes.get(i);
                 Node bb = baseNodes.get(j);
-                pairNodes.add(new Node(aa, bb, Operation.ADD, getCat(i+j)));
-                pairNodes.add(new Node(aa, bb, Operation.SUBTRACT, getCat(i+j)));
-                pairNodes.add(new Node(bb, aa, Operation.SUBTRACT, getCat(i+j)));
-                pairNodes.add(new Node(aa, bb, Operation.MULTIPLY, getCat(i+j)));
-                pairNodes.add(new Node(aa, bb, Operation.DIVIDE, getCat(i+j)));
-                pairNodes.add(new Node(bb, aa, Operation.DIVIDE, getCat(i+j)));
+                pairNodes.add(new Node(aa, bb, Operation.ADD, getCat(counter)));
+                pairNodes.add(new Node(aa, bb, Operation.SUBTRACT, getCat(counter)));
+                pairNodes.add(new Node(bb, aa, Operation.SUBTRACT, getCat(counter)));
+                pairNodes.add(new Node(aa, bb, Operation.MULTIPLY, getCat(counter)));
+                pairNodes.add(new Node(aa, bb, Operation.DIVIDE, getCat(counter)));
+                pairNodes.add(new Node(bb, aa, Operation.DIVIDE, getCat(counter)));
+                counter++;
             }
         }
 
-        System.out.println(pairNodes.size());
-        for (Node n : pairNodes) {
-            n.printNode();
-        }
+//        System.out.println(pairNodes.size());
+//        for (Node n : pairNodes) {
+//            n.printNode();
+//        }
     }
 
     private Node findSolution() {
