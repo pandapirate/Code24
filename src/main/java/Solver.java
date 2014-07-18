@@ -26,8 +26,11 @@ public class Solver {
         calculate2x2();
         calculate3x1();
         Node sol = findSolution();
-//        System.out.println(sol.getEq());
-        sol.printNode();
+        if (sol != null)
+            System.out.println(sol.getEq());
+        else
+            System.out.println("No Solution");
+//        sol.printNode();
         return sol != null;
     }
 
@@ -155,13 +158,13 @@ public class Solver {
 
     private Node findSolution() {
         for (Node n : solutions2x2) {
-            if ((int) n.base == 24) {
+            if ( n.base == 24.0) {
                 return n;
             }
         }
 
         for (Node n : solutions3x1) {
-            if ((int) n.base == 24) {
+            if ( n.base == 24.0) {
                 return n;
             }
         }
