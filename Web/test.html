@@ -15,6 +15,30 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+
+        <script>
+            $(function() {
+                $( ".draggable" ).draggable({
+                    containment: '#CardContainer',
+                    cursor: 'move'
+                });
+                $( ".droppable" ).droppable({
+                  accept: ".draggable",
+                  activeClass: "ui-state-default",
+                  drop: function( event, ui ) {
+                    var draggableId = ui.draggable.attr("id");
+                    var droppableId = $(this).attr("id");
+
+                    $( this )
+                      .addClass( "ui-state-highlight" )
+                      .find( "p" )
+                        .html( $("draggableId:p").text() );
+                  }
+                });
+              });
+
+        </script>
+
     </head>
     <body>
         <!-- Add your site or application content here -->
@@ -25,44 +49,40 @@
         <div id="CardContainer">
             <h3>Pieces</h3>
 
-            <div id="card1" class="ui-widget-content draggable" onclick="clickNumber(0)">
-                <p><script>document.write(input[0]);</script></p>
+            <div id="card1" class="ui-widget-content draggable">
+                <script>document.write(input[0]);</script>
             </div>
 
-            <div id="card2" class="ui-widget-content draggable" onclick="clickNumber(1)">
+            <div id="card2" class="ui-widget-content draggable">
                 <p><script>document.write(input[1]);</script></p>
             </div>
 
-            <div id="card3" class="ui-widget-content draggable" onclick="clickNumber(2)">
+            <div id="card3" class="ui-widget-content draggable">
                 <p><script>document.write(input[2]);</script></p>
             </div>
 
-            <div id="card4" class="ui-widget-content draggable" onclick="clickNumber(3)">
+            <div id="card4" class="ui-widget-content draggable">
                 <p><script>document.write(input[3]);</script></p>
             </div>
 
-            <h3>Operations</h3>
-
-            <div id="op1" class="ui-widget-content draggable" onclick="clickOp(0)">
-                <h3>+</h3>
-            </div>
-
-            <div id="op2" class="ui-widget-content draggable" onclick="clickOp(1)">
-                <h3>&minus;</h3>
-            </div>
-
-            <div id="op3" class="ui-widget-content draggable" onclick="clickOp(2)">
-                <h3>&times;</h3>
-            </div>
-
-            <div id="op4" class="ui-widget-content draggable" onclick="clickOp(3)">
-                <h3>&divide;</h3>
-            </div>
-
             <h3>Solve</h3>
-            <p id="solution"></p>
-            <br/>
-            <div id="reset" class="ui-widget-content draggable" onclick="reset()"><h3>Reset</h3></div>
+
+            <div class="ui-widget-header droppable">
+                <p>Drop here</p>
+            </div>
+
+            <div class="ui-widget-header droppable">
+                <p>Drop here</p>
+            </div>
+
+            <div class="ui-widget-header droppable">
+                <p>Drop here</p>
+            </div>
+
+            <div class="ui-widget-header droppable">
+                <p>Drop here</p>
+            </div>
+
         </div>
     </body>
 </html>
