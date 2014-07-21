@@ -29,10 +29,14 @@
 }
 
 #CardContainer{
-    width: 800px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -300px;
+    margin-top: -250px;
+    width: 600px;
     height: 500px;
-    float: left;
-    background-color:white;
+    background-color:gray;
 }
 
 h1 {
