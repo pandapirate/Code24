@@ -1,9 +1,22 @@
 .draggable {
+    float: left;
+    margin: 0px 10px 0px 10px;
+}
+
+.operations {
     width: 40px;
     height: 40px;
-    padding: 0.5em;
     float: left;
-    margin: 10px 10px 10px 0;
+    margin: 00px 10px 20px 10px;
+    font-size:150%;
+    text-align:center;
+}
+
+.control-button {
+    width: 80px;
+    height: 40px;
+    float: left;
+    margin: 00px 10px 00px 10px;
     text-align:center;
 }
 
@@ -19,9 +32,9 @@
     width: 800px;
     height: 500px;
     float: left;
-    background-color:cyan;
+    background-color:white;
 }
 
-h3 {
+h1 {
     clear: left;
 }

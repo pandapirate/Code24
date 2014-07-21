@@ -11,58 +11,63 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="js/Solver.js"></script>
         <script src="js/controller.js"></script>
-        <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+        <link rel="stylesheet" type="text/css" href="resources/jquery-ui/jquery-ui.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="resources/jquery-ui/external/jquery/jquery.js"></script>
+        <script type="text/javascript" src="resources/jquery-ui/jquery-ui.js"></script>
     </head>
     <body>
         <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-        <script>randomize();solveEq();</script>
+        <script>randomize();</script>
         <br/>
 
         <div id="CardContainer">
-            <h3>Pieces</h3>
+            <h1>Pieces</h1>
 
-            <div id="card1" class="ui-widget-content draggable" onclick="clickNumber(0)">
+            <div id="card1" class="draggable" onclick="clickNumber(0)">
                 <p><script>document.write(input[0]);</script></p>
             </div>
 
-            <div id="card2" class="ui-widget-content draggable" onclick="clickNumber(1)">
+            <div id="card2" class="draggable" onclick="clickNumber(1)">
                 <p><script>document.write(input[1]);</script></p>
             </div>
 
-            <div id="card3" class="ui-widget-content draggable" onclick="clickNumber(2)">
+            <div id="card3" class="draggable" onclick="clickNumber(2)">
                 <p><script>document.write(input[2]);</script></p>
             </div>
 
-            <div id="card4" class="ui-widget-content draggable" onclick="clickNumber(3)">
+            <div id="card4" class="draggable" onclick="clickNumber(3)">
                 <p><script>document.write(input[3]);</script></p>
             </div>
 
-            <h3>Operations</h3>
-
-            <div id="op1" class="ui-widget-content draggable" onclick="clickOp(0)">
-                <h3>+</h3>
-            </div>
-
-            <div id="op2" class="ui-widget-content draggable" onclick="clickOp(1)">
-                <h3>&minus;</h3>
-            </div>
-
-            <div id="op3" class="ui-widget-content draggable" onclick="clickOp(2)">
-                <h3>&times;</h3>
-            </div>
-
-            <div id="op4" class="ui-widget-content draggable" onclick="clickOp(3)">
-                <h3>&divide;</h3>
-            </div>
-
-            <h3>Solve</h3>
-            <p id="solution"></p>
+            <script>updateCardDisplay();</script>
             <br/>
-            <div id="reset" class="ui-widget-content draggable" onclick="reset()"><h3>Reset</h3></div>
+            <h1>Operations</h1>
+
+            <div id="op1" class="operations" onclick="clickOp(0)">
+                <button style="font-size:130%;"><b>+</b></button>
+            </div>
+
+            <div id="op2" class="operations" onclick="clickOp(1)">
+                <button style="font-size:130%;"><b>&minus; </b></button>
+            </div>
+
+            <div id="op3" class="operations" onclick="clickOp(2)">
+                <button style="font-size:130%;"><b>&times;  </b></button>
+            </div>
+
+            <div id="op4" class="operations" onclick="clickOp(3)">
+                <button style="font-size:130%;"><b>&divide; </b></button>
+            </div>
+            <br/>
+            <h1>Solve</h1>
+            <h3 id="solution"></h3>  <br/>
+            <br/>
+            <div id="reset" class="control-button" onclick="reset()"><button style="font-size:130%;">Reset</button></div>
+            <div id="solve" class="control-button" onclick="showSolution()"><button style="font-size:130%;">Solve</button></div>
+            <div id="next" class="control-button" onclick="next()"><button style="font-size:130%;">Next</button></div>
         </div>
+
+        <!--<script>updateCardDisplay();</script>-->
     </body>
 </html>

@@ -48,11 +48,11 @@ function Node (left, right, op, group, base) {
             case "ADD":
                 return "+";
             case "SUBTRACT":
-                return "-";
+                return "&minus;";
             case "MULTIPLY":
-                return "*";
+                return "&times;";
             case "DIVIDE":
-                return "/";
+                return "&divide;";
         }
         return "";
     }
@@ -61,6 +61,9 @@ function Node (left, right, op, group, base) {
 var solveEq = function() {
     solve(input[0], input[1], input[2], input[3]);
 }
+
+
+var finalSolution = "";
 
 var solve = function(a, b, c, d) {
     var baseNodes = [new Node(null, null, null, null, a), new Node(null, null, null, null, b), new Node(null, null, null, null, c), new Node(null, null, null, null, d)];
@@ -91,25 +94,46 @@ var solve = function(a, b, c, d) {
 
     var result = findSolution(solution);
     if (result === null) {
-        document.write("No Solution");
+        //document.write("No Solution");
+        finalSolution = "No Solution";
     } else {
-        document.write(result.printNode());
+        //document.write(result.printNode());
+        finalSolution = result.getEq();
     }
 };
 
 var input = [];
+var imageNames = [];
 var randomize = function() {
-
-    input[0] = (Math.floor(Math.random() * 13 + 1));
-    input[1] = (Math.floor(Math.random() * 13 + 1));
-    input[2] = (Math.floor(Math.random() * 13 + 1));
-    input[3] = (Math.floor(Math.random() * 13 + 1));
-
-    document.write("<div>");
+    finalSolution = "";
+    imageNames = [];
+    while (true) {
+        input[0] = (Math.floor(Math.random() * 13 + 1));
+        input[1] = (Math.floor(Math.random() * 13 + 1));
+        input[2] = (Math.floor(Math.random() * 13 + 1));
+        input[3] = (Math.floor(Math.random() * 13 + 1));
+        solveEq();
+        if (finalSolution != "No Solution")
+            break;
+    }
+/*    document.write("<div>");
     for (var x in input) {
         document.write(input[x] + " ");
     }
-    document.write("</div>");
+    document.write("</div>");*/
+
+    var prefix = ["c", "s", "h", "d"];
+    for (var i in input) {
+        while (true) {
+            var rand = Math.floor(Math.random() * 4);
+            var name = prefix[rand] + input[i] + ".png";
+            if ($.inArray(imageNames, name) === -1) {
+                imageNames.push(name);
+                break;
+            }
+        }
+    }
+    console.log(imageNames);
 };
 
 var calculate2x2 = function(pairNodes) {

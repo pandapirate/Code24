@@ -28,7 +28,10 @@ var clickOp = function(opID) {
 
 var updateDisplay = function() {
     var ele = document.getElementById("solution");
-    ele.innerHTML = equation + "=" + result;
+    if (equation === "")
+        ele.innerHTML = "";
+    else
+        ele.innerHTML = equation + "=" + result;
 };
 
 var reset = function() {
@@ -36,4 +39,24 @@ var reset = function() {
     result = 0;
     used = [];
     numberClicked = false;
-}
+    updateDisplay();
+};
+
+var showSolution = function() {
+    equation = finalSolution;
+    result = 24;
+    updateDisplay();
+};
+
+var next = function() {
+    reset();
+    randomize();
+    updateCardDisplay();
+};
+
+var updateCardDisplay = function() {
+    document.getElementById("card1").innerHTML = "<img src=\"resources\\cards\\" + imageNames[0] + "\">";
+    document.getElementById("card2").innerHTML = "<img src=\"resources\\cards\\" + imageNames[1] + "\">";
+    document.getElementById("card3").innerHTML = "<img src=\"resources\\cards\\" + imageNames[2] + "\">";
+    document.getElementById("card4").innerHTML = "<img src=\"resources\\cards\\" + imageNames[3] + "\">";
+};
