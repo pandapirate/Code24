@@ -59,15 +59,18 @@
             <div id="op4" class="operations" onclick="clickOp(3)">
                 <button style="font-size:130%;"><b>&divide; </b></button>
             </div>
+
+            <div id="op5" class="operations" onclick="saveValue()">
+                <button style="font-size:130%;" id="savedValue"><b>M</b></button>
+            </div>
+
             <br/>
             <h1>Solve</h1>
-            <h3 id="solution"></h3>  <br/>
+            <h3 id="solution"></h3>
             <br/>
-            <div id="reset" class="control-button" onclick="reset()"><button style="font-size:130%;">Reset</button></div>
-            <div id="solve" class="control-button" onclick="showSolution()"><button style="font-size:130%;">Solve</button></div>
+            <div id="reset" class="control-button" onclick="reset()"><button style="font-size:130%;">Clear</button></div>
+            <div id="solve" class="control-button" onclick="showSolution()"><button style="font-size:130%;">Answer</button></div>
             <div id="next" class="control-button" onclick="next()"><button style="font-size:130%;">Next</button></div>
         </div>
-
-        <!--<script>updateCardDisplay();</script>-->
     </body>
 </html>
