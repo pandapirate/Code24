@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+    <script src="js/controller.js"></script>
+    <script src="js/solver.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="menu">
+    <div data-role="header">
+        <h1>Solve 24</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+        <a href="#game" class="ui-btn">Start</a>
+        <a href="#scores" class="ui-btn">Scores</a>
+    </div>
+</div>
+
+<div data-role="page" id="game">
+    <div data-role="header">
+        <a href="#menu" class="ui-btn ui-btn-left ui-icon-home ui-btn-icon-left ui-alt-icon">Home</a>
+        <h1>Solve 24</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+        <script>randomize();</script>
+
+        <div class="align-div"> <!-- cards 1,2-->
+            <img src="cards/c1.png" class="card-img"  onclick="clickNumber(0)" id="card1" >
+            <img src="cards/h1.png" class="card-img"  onclick="clickNumber(1)" id="card2" >
+        </div>
+        <div class="align-div"> <!-- cards 3,4 -->
+            <img src="cards/s1.png" class="card-img"  onclick="clickNumber(2)" id="card3" >
+            <img src="cards/d1.png" class="card-img"  onclick="clickNumber(3)" id="card4" >
+        </div>
+        <script>updateCardDisplay();</script>
+
+        <div data-role="controlgroup" data-type="horizontal" class="align-div"> <!--control buttons-->
+            <a href="#" class="ui-btn operations">(</a>
+            <a href="#" class="ui-btn operations">)</a>
+            <a href="#" class="ui-btn operations">+</a>
+            <a href="#" class="ui-btn operations">&minus;</a>
+            <a href="#" class="ui-btn operations">&times;</a>
+            <a href="#" class="ui-btn operations">&divide;</a>
+        </div>
+        <div class="ui-field-contain align-div equation-input">
+            <input type="text" disabled="disabled" name="equation" id="equation" value="equation" style="text-align:center;">
+        </div>
+        <div class="align-div">
+            <button class="ui-btn ui-btn-inline">Clear</button>
+            <button class="ui-btn ui-btn-inline">Hint</button>
+            <button class="ui-btn ui-btn-inline">Skip: 3</button>
+        </div>
+    </div>
+
+    <div data-role="footer">
+        <div class="ui-grid-a" style="margin-top: 4px; margin-left: 5px; margin-right: 5px;">
+            <div class="ui-block-a">Score</div>
+            <div class="ui-block-b" style="text-align: right;">Time</div>
+        </div>
+    </div>
+</div>
+
+<div data-role="page" id="scores">
+    <div data-role="header">
+        <a href="#menu" class="ui-btn ui-btn-left ui-icon-home ui-btn-icon-left ui-alt-icon">Home</a>
+        <h1>Solve 24</h1>
+
+    </div>
+
+    <div data-role="main" class="ui-content">
+        <h2>Score List:</h2>
+        <ol data-role="listview" data-inset="true">
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+        </ol>
+    </div>
+</div>
+
+</body>
+</html>
