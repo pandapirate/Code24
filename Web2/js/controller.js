@@ -1,126 +1,129 @@
 var equation = "";
-var numberClicked = false;
-var lastOp = "";
-var valueSaved = "";
-
-var operations = ["+", "&minus;", "&times;", "&divide;"];
-var used = [];
+var displayEq = "";
 var result = 0;
+var numberClicked = false;
+
+var operations = ["+", "-", "*", "/"];
+var displayOp = ["+", "&minus;", "&times;", "&divide;"];
+var used = [];
+
+var score = 0;
+var time = 120;
+var hints = 3;
+var skips = 3;
 
 var clickNumber = function(numberID) {
     if (numberClicked || $.inArray(numberID, used) != -1) {
         return;
     } else {
         equation += input[numberID];
+        displayEq += input[numberID];
         used.push(numberID);
 
-        if (lastOp === "") {
-            result = input[numberID];
-        } else {
-            switch (lastOp) {
-                case 0: result += input[numberID]; break;
-                case 1: result -= input[numberID]; break;
-                case 2: result *= input[numberID]; break;
-                case 3: result /= input[numberID]; break;
-            }
-            equation = "(" + equation + ")";
-            verifyResult();
-        }
-
+        findAnswer();
         updateDisplay();
         numberClicked = true;
     }
-        console.log(equation + "=" + result);
-
+    //console.log(equation + "=" + result);
 };
 
 var clickOp = function(opID) {
-
     if (numberClicked) {
         equation += operations[opID];
+        displayEq += displayOp[opID];
         updateDisplay();
         numberClicked = false;
-        lastOp = opID;
-    } else {
+    } else
         return;
-    }
-        console.log(equation + "=" + result);
+
+//    console.log(equation + "=" + result);
 };
 
-var saveValue = function() {
+var addParenthesis = function(id) {
+    var char = equation.substring(equation.length-1);
+    console.log(char + " -- " + operations.indexOf(char));
 
-    if (valueSaved === "") {
-        document.getElementById("savedValue").innerHTML = "<b>"+result+"</b>";
-        valueSaved = result;
-        result = 0;
-        equation = "";
-        lastOp = "";
-        numberClicked = false;
+    if (char != "" && id === 0 && (operations.indexOf(char) === -1))
+        return;
+    else if (id === 1 && operations.indexOf(char) > -1)
+        return;
+
+    if (id === 0) {
+        equation += "(";
+        displayEq += "(";
     } else {
-        document.getElementById("savedValue").innerHTML = "<b>M</b>";
-        equation += valueSaved;
-
-        if (lastOp === "") {
-            result = valueSaved;
-        } else {
-            switch (lastOp) {
-                case 0: result += valueSaved; break;
-                case 1: result -= valueSaved; break;
-                case 2: result *= valueSaved; break;
-                case 3: result /= valueSaved; break;
-            }
-            equation = "(" + equation + ")";
-            verifyResult();
-        }
-        valueSaved = 0;
-        numberClicked = true;
+        equation += ")";
+        displayEq += ")";
     }
-
+    findAnswer();
     updateDisplay();
-        console.log(equation + "=" + result);
+};
+
+var findAnswer = function() {
+    try {
+        result = eval(equation);
+        verifyResult();
+    } catch (e) {
+        if (e instanceof SyntaxError) {
+            result = "";
+        }
+    }
 }
 
 var updateDisplay = function() {
-    var ele = document.getElementById("solution");
-    if (equation === "")
-        ele.innerHTML = "";
+    var ele = document.getElementById("equation");
+    if (displayEq === "")
+        ele.innerHTML = "&nbsp;";
     else
-        ele.innerHTML = equation + " = " + result;
+        ele.innerHTML = displayEq + " = " + result;
 };
 
 var verifyResult = function() {
     if (used.length === 4 && result === 24) {
         alert("You win");
     }
-}
+};
+
+var backspace = function() {
+    equation = equation.substring(0, equation.length-1);
+    updateDisplay();
+};
 
 var reset = function() {
     equation = "";
+    displayEq = "";
     result = 0;
     used = [];
     numberClicked = false;
-    lastOp = "";
-    valueSaved = "";
-    document.getElementById("savedValue").innerHTML = "<b>M</b>";
 
     updateDisplay();
 };
 
 var showSolution = function() {
-    equation = finalSolution;
+    displayEq = finalSolution;
     result = 24;
     updateDisplay();
+    hints--;
+    if (hints === 0) {
+        $('#hint').addClass('ui-disabled');
+    }
+    var ele = document.getElementById("hint").innerHTML = "Hint: " + hints;
 };
 
 var next = function() {
     reset();
     randomize();
     updateCardDisplay();
+    skips--;
+    if (skips === 0) {
+        $('#skip').addClass('ui-disabled');
+    }
+    var ele = document.getElementById("skip").innerHTML = "Skip: " + skips;
 };
 
 var updateCardDisplay = function() {
-    document.getElementById("card1").innerHTML = "<img src=\"resources\\cards\\" + imageNames[0] + "\">";
-    document.getElementById("card2").innerHTML = "<img src=\"resources\\cards\\" + imageNames[1] + "\">";
-    document.getElementById("card3").innerHTML = "<img src=\"resources\\cards\\" + imageNames[2] + "\">";
-    document.getElementById("card4").innerHTML = "<img src=\"resources\\cards\\" + imageNames[3] + "\">";
+    document.getElementById("card1").src = "cards\\" + imageNames[0];
+    document.getElementById("card2").src = "cards\\" + imageNames[1];
+    document.getElementById("card3").src = "cards\\" + imageNames[2];
+    document.getElementById("card4").src = "cards\\" + imageNames[3];
 };

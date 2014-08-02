@@ -62,7 +62,6 @@ var solveEq = function() {
     solve(input[0], input[1], input[2], input[3]);
 }
 
-
 var finalSolution = "";
 
 var solve = function(a, b, c, d) {
@@ -116,6 +115,7 @@ var randomize = function() {
         if (finalSolution != "No Solution")
             break;
     }
+//    console.log(finalSolution);
 /*    document.write("<div>");
     for (var x in input) {
         document.write(input[x] + " ");

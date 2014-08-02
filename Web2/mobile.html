@@ -5,10 +5,10 @@
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
     <link rel="stylesheet" href="css/style.css">
 
-    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
-    <script src="js/controller.js"></script>
-    <script src="js/solver.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+    <script type="text/javascript" src="js/solver.js"></script>
+    <script type="text/javascript" src="js/controller.js"></script>
 </head>
 <body>
 
@@ -40,30 +40,32 @@
             <img src="cards/s1.png" class="card-img"  onclick="clickNumber(2)" id="card3" >
             <img src="cards/d1.png" class="card-img"  onclick="clickNumber(3)" id="card4" >
         </div>
-        <script>updateCardDisplay();</script>
 
         <div data-role="controlgroup" data-type="horizontal" class="align-div"> <!--control buttons-->
-            <a href="#" class="ui-btn operations">(</a>
-            <a href="#" class="ui-btn operations">)</a>
-            <a href="#" class="ui-btn operations">+</a>
-            <a href="#" class="ui-btn operations">&minus;</a>
-            <a href="#" class="ui-btn operations">&times;</a>
-            <a href="#" class="ui-btn operations">&divide;</a>
+            <a href="#" class="ui-btn operations" onclick="addParenthesis(0)">(</a>
+            <a href="#" class="ui-btn operations" onclick="addParenthesis(1)">)</a>
+            <a href="#" class="ui-btn operations" onclick="clickOp(0)">+</a>
+            <a href="#" class="ui-btn operations" onclick="clickOp(1)">&minus;</a>
+            <a href="#" class="ui-btn operations" onclick="clickOp(2)">&times;</a>
+            <a href="#" class="ui-btn operations" onclick="clickOp(3)">&divide;</a>
         </div>
         <div class="ui-field-contain align-div equation-input">
-            <input type="text" disabled="disabled" name="equation" id="equation" value="equation" style="text-align:center;">
+            <!--<input type="text" disabled="disabled" name="equation" id="equation" value="equation" style="text-align:center;">-->
+            <h3 id="equation" style="text-align:center;"></h3>
         </div>
         <div class="align-div">
-            <button class="ui-btn ui-btn-inline">Clear</button>
-            <button class="ui-btn ui-btn-inline">Hint</button>
-            <button class="ui-btn ui-btn-inline">Skip: 3</button>
+            <button id="clear" class="ui-btn ui-btn-inline" onclick="reset()">Clear</button>
+            <button id="hint" class="ui-btn ui-btn-inline" onclick="showSolution()">Hint: 3</button>
+            <button id="skip" class="ui-btn ui-btn-inline" onclick="next()">Skip: 3</button>
         </div>
+        <script>updateCardDisplay();reset();</script>
     </div>
 
     <div data-role="footer">
-        <div class="ui-grid-a" style="margin-top: 4px; margin-left: 5px; margin-right: 5px;">
-            <div class="ui-block-a">Score</div>
-            <div class="ui-block-b" style="text-align: right;">Time</div>
+        <div class="ui-grid-b" style="margin-top: 4px; margin-left: 5px; margin-right: 5px;">
+            <div class="ui-block-a">5000</div>
+            <div class="ui-block-b" style="text-align: center; color: green;">+1000</div>
+            <div class="ui-block-c" style="text-align: right;">1:20</div>
         </div>
     </div>
 </div>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Solve 24</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" type="text/css" href="resources/jquery-ui/jquery-ui.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="resources/bootstrap/css/bootstrap.css">
+
+        <script type="text/javascript" src="resources/jquery-ui/external/jquery/jquery.js"></script>
+        <script type="text/javascript" src="resources/jquery-ui/jquery-ui.js"></script>
+        <script type="text/javascript" src="resources/bootstrap/js/bootstrap.js"></script>
+        <script src="js/Solver.js"></script>
+        <script src="js/controller.js"></script>
+    </head>
+    <body>
+        <!-- Add your site or application content here -->
+        <script>randomize();</script>
+        <br/>
+
+        <div id="CardContainer">
+            <h1>Pieces</h1>
+
+            <div id="card1" class="draggable" onclick="clickNumber(0)">
+                <p><script>document.write(input[0]);</script></p>
+            </div>
+
+            <div id="card2" class="draggable" onclick="clickNumber(1)">
+                <p><script>document.write(input[1]);</script></p>
+            </div>
+
+            <div id="card3" class="draggable" onclick="clickNumber(2)">
+                <p><script>document.write(input[2]);</script></p>
+            </div>
+
+            <div id="card4" class="draggable" onclick="clickNumber(3)">
+                <p><script>document.write(input[3]);</script></p>
+            </div>
+
+            <script>updateCardDisplay();</script>
+            <br/>
+            <h1>Operations</h1>
+
+            <div id="op1" class="operations" onclick="clickOp(0)">
+                <button style="font-size:130%;"><b>+</b></button>
+            </div>
+
+            <div id="op2" class="operations" onclick="clickOp(1)">
+                <button style="font-size:130%;"><b>&minus; </b></button>
+            </div>
+
+            <div id="op3" class="operations" onclick="clickOp(2)">
+                <button style="font-size:130%;"><b>&times;  </b></button>
+            </div>
+
+            <div id="op4" class="operations" onclick="clickOp(3)">
+                <button style="font-size:130%;"><b>&divide; </b></button>
+            </div>
+
+            <div id="op5" class="operations" onclick="saveValue()">
+                <button style="font-size:130%;" id="savedValue"><b>M</b></button>
+            </div>
+
+            <br/>
+            <h1>Solve</h1>
+            <h3 id="solution"></h3>
+            <br/>
+            <div id="reset" class="control-button" onclick="reset()"><button style="font-size:130%;">Clear</button></div>
+            <div id="solve" class="control-button" onclick="showSolution()"><button style="font-size:130%;">Answer</button></div>
+            <div id="next" class="control-button" onclick="next()"><button style="font-size:130%;">Next</button></div>
+        </div>
+    </body>
+</html>
