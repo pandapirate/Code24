@@ -8,9 +8,32 @@ var displayOp = ["+", "&minus;", "&times;", "&divide;"];
 var used = [];
 
 var score = 0;
-var time = 120;
+var time = 99;
 var hints = 3;
 var skips = 3;
+
+var hintUsed = false;
+var myInterval = 0;
+
+$(document).on('pagebeforeshow', '#game', function(){
+    console.log("Moved to game");
+
+    score = 0;
+    time = 99;
+    hints = 3;
+    skips = 3;
+    document.getElementById("skip").innerHTML = "Skip: " + skips;
+    document.getElementById("hint").innerHTML = "Hint: " + hints;
+    document.getElementById("timer").innerHTML = time;
+    $('#hint').removeClass('ui-disabled');
+    $('#skip').removeClass('ui-disabled');
+    reset();
+    startClock();
+});
+
+var endGame = function() {
+    clearInterval(myInterval)
+};
 
 var clickNumber = function(numberID) {
     if (numberClicked || $.inArray(numberID, used) != -1) {
@@ -78,9 +101,28 @@ var updateDisplay = function() {
         ele.innerHTML = displayEq + " = " + result;
 };
 
+
+var startClock = function() {
+    if(myInterval > 0) clearInterval(myInterval);  // stop
+    myInterval = setInterval( "updateClock()", 1000 );  // run
+}
+
+var updateClock = function() {
+    time -= 1;
+    document.getElementById("timer").innerHTML = time;
+    if (time === 0) {
+        clearInterval(myInterval);
+        window.location.href = "#scores";
+    }
+}
+
 var verifyResult = function() {
     if (used.length === 4 && result === 24) {
-        alert("You win");
+        score += hintUsed ? 500 : 1000;
+        next();
+        document.getElementById("score").innerHTML = score < 1000 ? "0" + score : score;
+        document.getElementById("addScore").innerHTML = "Correct!";
+        window.setTimeout( function(){document.getElementById("addScore").innerHTML = "";}, 2000 );
     }
 };
 
@@ -103,6 +145,14 @@ var showSolution = function() {
     displayEq = finalSolution;
     result = 24;
     updateDisplay();
+    hintUsed = true;
+
+    equation = "";
+    displayEq = "";
+    result = 0;
+    used = [];
+    numberClicked = false;
+
     hints--;
     if (hints === 0) {
         $('#hint').addClass('ui-disabled');
@@ -114,6 +164,8 @@ var next = function() {
     reset();
     randomize();
     updateCardDisplay();
+    hintUsed = false;
+
     skips--;
     if (skips === 0) {
         $('#skip').addClass('ui-disabled');

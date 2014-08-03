@@ -25,7 +25,7 @@
 
 <div data-role="page" id="game">
     <div data-role="header">
-        <a href="#menu" class="ui-btn ui-btn-left ui-icon-home ui-btn-icon-left ui-alt-icon">Home</a>
+        <a href="#menu" class="ui-btn ui-btn-left ui-icon-home ui-btn-icon-left ui-alt-icon" onclick="endGame()">Home</a>
         <h1>Solve 24</h1>
     </div>
 
@@ -58,14 +58,14 @@
             <button id="hint" class="ui-btn ui-btn-inline" onclick="showSolution()">Hint: 3</button>
             <button id="skip" class="ui-btn ui-btn-inline" onclick="next()">Skip: 3</button>
         </div>
-        <script>updateCardDisplay();reset();</script>
+        <script>updateCardDisplay();</script>
     </div>
 
     <div data-role="footer">
         <div class="ui-grid-b" style="margin-top: 4px; margin-left: 5px; margin-right: 5px;">
-            <div class="ui-block-a">5000</div>
-            <div class="ui-block-b" style="text-align: center; color: green;">+1000</div>
-            <div class="ui-block-c" style="text-align: right;">1:20</div>
+            <div class="ui-block-a" id="score">0000</div>
+            <div class="ui-block-b" id="addScore" style="text-align: center; color: green;"></div>
+            <div class="ui-block-c" id="timer" style="text-align: right;">99</div>
         </div>
     </div>
 </div>
