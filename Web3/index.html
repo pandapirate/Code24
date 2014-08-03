@@ -25,95 +25,57 @@
 
     <div data-role="main">
         <div id="mainContainer">
-            <script>randomize();</script>
+            <script></script>
             <div id="card1-container" class="card-container">
+                <span class='calculated-results'></span>
                 <div class="op-container" id="card1-op">
-                    <div class="operations"><img src="images/plus.png" class="op-img"></div>
-                    <div class="operations"><img src="images/minus.png" class="op-img"></div>
-                    <div class="operations"><img src="images/times.png" class="op-img"></div>
-                    <div class="operations"><img src="images/divide.png" class="op-img"></div>
+                    <div class="operations add"></div>
+                    <div class="operations minus"></div>
+                    <div class="operations times"></div>
+                    <div class="operations divide"></div>
                 </div>
             </div>
             <div id="card2-container" class="card-container">
+                <span class='calculated-results'></span>
                 <div class="op-container" id="card2-op">
-                    <div class="operations"><img src="images/plus.png" class="op-img"></div>
-                    <div class="operations"><img src="images/minus.png" class="op-img"></div>
-                    <div class="operations"><img src="images/times.png" class="op-img"></div>
-                    <div class="operations"><img src="images/divide.png" class="op-img"></div>
+                    <div class="operations add"></div>
+                    <div class="operations minus"></div>
+                    <div class="operations times"></div>
+                    <div class="operations divide"></div>
                 </div>
             </div>
             <div id="card3-container" class="card-container">
+                <span class='calculated-results'></span>
                 <div class="op-container" id="card3-op">
-                    <div class="operations"><img src="images/plus.png" class="op-img"></div>
-                    <div class="operations"><img src="images/minus.png" class="op-img"></div>
-                    <div class="operations"><img src="images/times.png" class="op-img"></div>
-                    <div class="operations"><img src="images/divide.png" class="op-img"></div>
+                    <div class="operations add"></div>
+                    <div class="operations minus"></div>
+                    <div class="operations times"></div>
+                    <div class="operations divide"></div>
                 </div>
             </div>
             <div id="card4-container" class="card-container">
+                <span class='calculated-results'></span>
                 <div class="op-container" id="card4-op">
-                    <div class="operations"><img src="images/plus.png" class="op-img"></div>
-                    <div class="operations"><img src="images/minus.png" class="op-img"></div>
-                    <div class="operations"><img src="images/times.png" class="op-img"></div>
-                    <div class="operations"><img src="images/divide.png" class="op-img"></div>
+                    <div class="operations add"></div>
+                    <div class="operations minus"></div>
+                    <div class="operations times"></div>
+                    <div class="operations divide"></div>
                 </div>
             </div>
         </div>
-
-
-        <script>updateCardDisplay();
-            $('.card-container').draggable({/*containment:"#mainContainer", */snap:".card-container", revert:true,  opacity:0.5,
-                start: function(event, ui) {
-                    console.log("start")
-                    $(this).css("width", "25%");
-                    $(this).css("height", "25%");
-                },
-                stop: function( event, ui ) {
-                    console.log("return")
-                    $(this).css("width", "50%");
-                    $(this).css("height", "50%");
-                }
-            });
-
-            $("#mainContainer div" ).draggable({ stack: "#mainContainer div" });
-            $('.card-container').droppable({
-                accept: ".card-container",
-                over: function( event, ui ) {
-                    console.log("in");
-                },
-                out: function( event, ui ) {
-                    console.log("out");
-                },
-                drop: function( event, ui ) {
-                    var draggableId = ui.draggable.attr("id");
-                    var droppableId = $(this).attr("id");
-//                    console.log(draggableId + " dropped on " + droppableId);
-                    registerNumbers(draggableId, droppableId);
-//                    $('#operationMenu').popup('open');
-                }
-            });
-
-        </script>
-
     </div>
 
     <div data-role="footer">
         <div class="ui-grid-b" style="margin-top: 4px; margin-left: 5px; margin-right: 5px;">
-            <div class="ui-block-a"><button id="undo">Undo</button></div>
+            <div class="ui-block-a"><a href="#How-to-Play" data-rel="popup" class="ui-btn" data-transition="pop">How-to-Play</a> <!--<button id="undo">Undo</button>--></div>
             <div class="ui-block-b"><button id="reset">Reset</button></div>
             <div class="ui-block-c"><button id="skip">Skip</button></div>
         </div>
     </div>
 
-    <!--<div data-role="popup" id="operationMenu" data-theme="b">-->
-        <!--<ul data-role="listview" data-inset="true" style="min-width:210px;">-->
-            <!--<li data-role="list-divider">Choose an operation</li>-->
-            <!--<li><a onclick="operationClick(0)"><script>document.write(getEquation(0))</script></a></li>-->
-            <!--<li><a onclick="operationClick(1)"><script>document.write(getEquation(1))</script></a></li>-->
-            <!--<li><a onclick="operationClick(2)"><script>document.write(getEquation(2))</script></a></li>-->
-            <!--<li><a onclick="operationClick(3)"><script>document.write(getEquation(3))</script></a></li>-->
-        <!--</ul>-->
-    <!--</div>-->
+    <div data-role="popup" id="How-to-Play">
+        <p>Drag the cards on top of another card to an operation to apply. The dragged number will be the first operator. Numbers are between 1 and 13. Have Fun!</p>
+    </div>
 </div>
 
 <div data-role="page" id="scores">
