@@ -1,0 +1,37 @@
+[data-role=page]{height: 100% !important; position:relative !important;}
+[data-role=footer]{bottom:0; position:absolute !important; top: auto !important; width:100%;}
+
+/*.card-container {*/
+    /*float: left;*/
+    /*width:50%;*/
+    /*background-color:blue;*/
+/*}*/
+
+/*html, body { height: 100%; padding: 0; margin: 0; }*/
+.card-container {
+    position: absolute;
+    width: 50%; height: 50%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+#mainContainer {
+    position: absolute;
+}
+
+.op-container {
+    width: 100%;
+    height: 100%;
+}
+
+.operations {
+    float: left;
+    width: 50%;
+    height: 50%;
+}
+
+.op-img {
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+}

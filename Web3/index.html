@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>24</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+    <script type="text/javascript" src="jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="js/solver.js"></script>
+    <script type="text/javascript" src="js/controller.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="main">
+    <div data-role="header">
+        <a class="ui-btn ui-btn-left" id="score">0000</a>
+        <h1>Solve 24</h1>
+        <a class="ui-btn ui-btn-right" id="timer">99</a>
+
+    </div>
+
+    <div data-role="main">
+        <div id="mainContainer">
+            <script>randomize();</script>
+            <div id="card1-container" class="card-container">
+                <div class="op-container" id="card1-op">
+                    <div class="operations"><img src="images/plus.png" class="op-img"></div>
+                    <div class="operations"><img src="images/minus.png" class="op-img"></div>
+                    <div class="operations"><img src="images/times.png" class="op-img"></div>
+                    <div class="operations"><img src="images/divide.png" class="op-img"></div>
+                </div>
+            </div>
+            <div id="card2-container" class="card-container">
+                <div class="op-container" id="card2-op">
+                    <div class="operations"><img src="images/plus.png" class="op-img"></div>
+                    <div class="operations"><img src="images/minus.png" class="op-img"></div>
+                    <div class="operations"><img src="images/times.png" class="op-img"></div>
+                    <div class="operations"><img src="images/divide.png" class="op-img"></div>
+                </div>
+            </div>
+            <div id="card3-container" class="card-container">
+                <div class="op-container" id="card3-op">
+                    <div class="operations"><img src="images/plus.png" class="op-img"></div>
+                    <div class="operations"><img src="images/minus.png" class="op-img"></div>
+                    <div class="operations"><img src="images/times.png" class="op-img"></div>
+                    <div class="operations"><img src="images/divide.png" class="op-img"></div>
+                </div>
+            </div>
+            <div id="card4-container" class="card-container">
+                <div class="op-container" id="card4-op">
+                    <div class="operations"><img src="images/plus.png" class="op-img"></div>
+                    <div class="operations"><img src="images/minus.png" class="op-img"></div>
+                    <div class="operations"><img src="images/times.png" class="op-img"></div>
+                    <div class="operations"><img src="images/divide.png" class="op-img"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <script>updateCardDisplay();
+            $('.card-container').draggable({/*containment:"#mainContainer", */snap:".card-container", revert:true,  opacity:0.5,
+                start: function(event, ui) {
+                    console.log("start")
+                    $(this).css("width", "25%");
+                    $(this).css("height", "25%");
+                },
+                stop: function( event, ui ) {
+                    console.log("return")
+                    $(this).css("width", "50%");
+                    $(this).css("height", "50%");
+                }
+            });
+
+            $("#mainContainer div" ).draggable({ stack: "#mainContainer div" });
+            $('.card-container').droppable({
+                accept: ".card-container",
+                over: function( event, ui ) {
+                    console.log("in");
+                },
+                out: function( event, ui ) {
+                    console.log("out");
+                },
+                drop: function( event, ui ) {
+                    var draggableId = ui.draggable.attr("id");
+                    var droppableId = $(this).attr("id");
+//                    console.log(draggableId + " dropped on " + droppableId);
+                    registerNumbers(draggableId, droppableId);
+//                    $('#operationMenu').popup('open');
+                }
+            });
+
+        </script>
+
+    </div>
+
+    <div data-role="footer">
+        <div class="ui-grid-b" style="margin-top: 4px; margin-left: 5px; margin-right: 5px;">
+            <div class="ui-block-a"><button id="undo">Undo</button></div>
+            <div class="ui-block-b"><button id="reset">Reset</button></div>
+            <div class="ui-block-c"><button id="skip">Skip</button></div>
+        </div>
+    </div>
+
+    <!--<div data-role="popup" id="operationMenu" data-theme="b">-->
+        <!--<ul data-role="listview" data-inset="true" style="min-width:210px;">-->
+            <!--<li data-role="list-divider">Choose an operation</li>-->
+            <!--<li><a onclick="operationClick(0)"><script>document.write(getEquation(0))</script></a></li>-->
+            <!--<li><a onclick="operationClick(1)"><script>document.write(getEquation(1))</script></a></li>-->
+            <!--<li><a onclick="operationClick(2)"><script>document.write(getEquation(2))</script></a></li>-->
+            <!--<li><a onclick="operationClick(3)"><script>document.write(getEquation(3))</script></a></li>-->
+        <!--</ul>-->
+    <!--</div>-->
+</div>
+
+<div data-role="page" id="scores">
+    <div data-role="header">
+        <a href="#main" class="ui-btn ui-btn-left ui-icon-home ui-btn-icon-left ui-alt-icon">Back</a>
+        <h1>24</h1>
+
+    </div>
+
+    <div data-role="main" class="ui-content">
+        <h2>Score List:</h2>
+        <ol data-role="listview" data-inset="true">
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+        </ol>
+    </div>
+</div>
+
+</body>
+</html>
