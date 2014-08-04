@@ -73,4 +73,11 @@
     opacity: 0.6;
 }
 
+.highlight {
+    width: 100%;
+    height: 100%;
+    background-color: yellow;
+    opacity: 0.6;
+}
+
 

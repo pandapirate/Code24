@@ -50,13 +50,15 @@ $(document).ready(function(){
     startClock();
 
     $("#undo").click(function(){undo();})
-    $("#reset").click(function(){showMessage();})
+    $("#reset").click(function(){reset();})
     $("#skip").click(function(){next(true);})
 
     $(".op-container").hide();
 //    updateState();
 
     $('.card-container').draggable({/*containment:"#mainContainer", */snap:".card-container", revert:true,  opacity:0.5,
+        scrollSensitivity: 400,
+//        scroll: false,
         start: function(event, ui) {
             console.log("start")
             $(this).css("width", "25%");
@@ -95,6 +97,14 @@ $(document).ready(function(){
 
     $('.operations').droppable({
         accept: ".card-container",
+        over: function( event, ui ) {
+            console.log("in");
+            $(this).html("<div class='highlight'></div>");
+        },
+        out: function( event, ui ) {
+            console.log("out");
+            $(this).html("");
+        },
         drop: function (event, ui) {
             var draggableId = ui.draggable.attr("id");
             var droppableClass = $(this).attr("class");
@@ -196,9 +206,10 @@ var verifyResult = function(result) {
         next(false);
 
         showMessage();
-
-        if (questionNumber >= 5)
-            window.location.href = "#scores";
+        
+//TODO: remove
+//        if (questionNumber >= 5)
+//            window.location.href = "#scores";
     }
 };
 
@@ -255,6 +266,7 @@ var undo = function() {
 var reset = function() {
     used = 0;
     map = {'card1-container': input[0], 'card2-container': input[1], 'card3-container': input[2], 'card4-container': input[3]};
+    $('#undo').addClass('ui-disabled');
 
     updateCardDisplay();
 };

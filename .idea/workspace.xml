@@ -4,17 +4,18 @@
     <list default="true" id="07329609-9a2f-430b-97ec-b76a86aa222b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web3/js/controller.js" afterPath="$PROJECT_DIR$/Web3/js/controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web3/index.html" afterPath="$PROJECT_DIR$/Web3/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web3/css/style.css" afterPath="$PROJECT_DIR$/Web3/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Code24.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1407084687057" ignored="false" />
-    <file path="/index.html" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1407130328773" ignored="false" />
+    <file path="/index.html" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1407132644947" ignored="false" />
     <file path="/test.html" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1406074375900" ignored="false" />
-    <file path="/style.css" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1407092781462" ignored="false" />
+    <file path="/style.css" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1407132398646" ignored="false" />
     <file path="/fragment.java" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1407004888511" ignored="false" />
     <file path="/mobile.html" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1407029373083" ignored="false" />
-    <file path="/controller.js" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1407130356771" ignored="false" />
+    <file path="/controller.js" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1407132554545" ignored="false" />
     <file path="/solver.js" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1407005984813" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -81,7 +82,7 @@
           <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Web3/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="84" column="6" selection-start="4010" selection-end="4010" vertical-scroll-proportion="0.47141042">
+                <state line="23" column="10" selection-start="1006" selection-end="1006" vertical-scroll-proportion="0.46759847">
                   <folding>
                     <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                   </folding>
@@ -92,7 +93,7 @@
           <file leaf-file-name="controller.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Web3/js/controller.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="282" column="2" selection-start="8617" selection-end="8617" vertical-scroll-proportion="0.0">
+                <state line="294" column="2" selection-start="8984" selection-end="8984" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -110,7 +111,7 @@
           <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Web3/css/style.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="23" column="17" selection-start="610" selection-end="610" vertical-scroll-proportion="0.0">
+                <state line="67" column="1" selection-start="1247" selection-end="1247" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -123,11 +124,8 @@
           <file leaf-file-name="controller.js" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Web3/js/controller.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="24" column="20" selection-start="540" selection-end="540" vertical-scroll-proportion="0.4729064">
-                  <folding>
-                    <element signature="e#3344#3373#0" expanded="false" />
-                    <element signature="e#3413#4338#0" expanded="false" />
-                  </folding>
+                <state line="208" column="8" selection-start="6353" selection-end="6353" vertical-scroll-proportion="0.37438422">
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -671,7 +669,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Web/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="9" selection-start="1370" selection-end="1370" vertical-scroll-proportion="0.019559903" />
+        <state line="32" column="9" selection-start="1370" selection-end="1370" vertical-scroll-proportion="0.019559903">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
@@ -682,13 +682,6 @@
     <entry file="file://$PROJECT_DIR$/Web3/js/jquery.ui.touch-punch.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="4" selection-start="2793" selection-end="2793" vertical-scroll-proportion="0.6361446">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web3/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="17" selection-start="610" selection-end="610" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -707,9 +700,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Web3/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="1" selection-start="1247" selection-end="1247" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Web3/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="6" selection-start="4010" selection-end="4010" vertical-scroll-proportion="0.47141042">
+        <state line="23" column="10" selection-start="1006" selection-end="1006" vertical-scroll-proportion="0.46759847">
           <folding>
             <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -718,11 +718,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Web3/js/controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="20" selection-start="540" selection-end="540" vertical-scroll-proportion="0.4729064">
-          <folding>
-            <element signature="e#3344#3373#0" expanded="false" />
-            <element signature="e#3413#4338#0" expanded="false" />
-          </folding>
+        <state line="208" column="8" selection-start="6353" selection-end="6353" vertical-scroll-proportion="0.37438422">
+          <folding />
         </state>
       </provider>
     </entry>
