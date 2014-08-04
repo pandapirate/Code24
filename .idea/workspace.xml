@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="07329609-9a2f-430b-97ec-b76a86aa222b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web3/js/controller.js" afterPath="$PROJECT_DIR$/Web3/js/controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web3/index.html" afterPath="$PROJECT_DIR$/Web3/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web3/css/style.css" afterPath="$PROJECT_DIR$/Web3/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web3/js/jquery.ui.touch-punch.min.js" afterPath="$PROJECT_DIR$/Web3/js/jquery.ui.touch-punch.min.js" />
     </list>
     <ignored path="Code24.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -15,7 +13,7 @@
     <file path="/style.css" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1407092781462" ignored="false" />
     <file path="/fragment.java" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1407004888511" ignored="false" />
     <file path="/mobile.html" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1407029373083" ignored="false" />
-    <file path="/controller.js" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1407094028795" ignored="false" />
+    <file path="/controller.js" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1407119191216" ignored="false" />
     <file path="/solver.js" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1407005984813" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -82,7 +80,7 @@
           <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Web3/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="76" column="161" selection-start="3585" selection-end="3585" vertical-scroll-proportion="0.64223605">
+                <state line="76" column="161" selection-start="3585" selection-end="3585" vertical-scroll-proportion="1.5510597">
                   <folding>
                     <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                   </folding>
@@ -93,7 +91,7 @@
           <file leaf-file-name="controller.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Web3/js/controller.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="215" column="2" selection-start="6537" selection-end="6537" vertical-scroll-proportion="0.0">
+                <state line="219" column="2" selection-start="6707" selection-end="6707" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -124,10 +122,10 @@
           <file leaf-file-name="controller.js" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Web3/js/controller.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="129" column="31" selection-start="4272" selection-end="4272" vertical-scroll-proportion="0.49879518">
+                <state line="51" column="7" selection-start="1586" selection-end="1586" vertical-scroll-proportion="0.6764706">
                   <folding>
-                    <element signature="e#2684#2713#0" expanded="false" />
-                    <element signature="e#2753#3678#0" expanded="false" />
+                    <element signature="e#2789#2818#0" expanded="false" />
+                    <element signature="e#2858#3783#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -523,6 +521,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32911393" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41374475" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -545,7 +544,6 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298731" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -632,10 +630,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="69" column="10" selection-start="3350" selection-end="3350" vertical-scroll-proportion="0.47204968">
           <folding>
-            <element signature="n#style#0;n#h3#0;n#div#3;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#div#3;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -673,8 +671,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="28" selection-start="936" selection-end="936" vertical-scroll-proportion="0.5180573">
           <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -709,7 +707,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Web3/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="161" selection-start="3585" selection-end="3585" vertical-scroll-proportion="0.64223605">
+        <state line="76" column="161" selection-start="3585" selection-end="3585" vertical-scroll-proportion="1.5510597">
           <folding>
             <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -718,10 +716,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Web3/js/controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="129" column="31" selection-start="4272" selection-end="4272" vertical-scroll-proportion="0.49879518">
+        <state line="51" column="7" selection-start="1586" selection-end="1586" vertical-scroll-proportion="0.6764706">
           <folding>
-            <element signature="e#2684#2713#0" expanded="false" />
-            <element signature="e#2753#3678#0" expanded="false" />
+            <element signature="e#2789#2818#0" expanded="false" />
+            <element signature="e#2858#3783#0" expanded="false" />
           </folding>
         </state>
       </provider>

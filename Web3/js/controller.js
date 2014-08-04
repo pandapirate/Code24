@@ -30,7 +30,7 @@ $(document).ready(function(){
 
     $("#undo").click(function(){undo();})
     $("#reset").click(function(){reset();})
-    $("#skip").click(function(){next();})
+    $("#skip").click(function(){next(true);})
 
     $(".op-container").hide();
 
@@ -46,7 +46,9 @@ $(document).ready(function(){
             $(this).css("width", "50%");
             $(this).css("height", "50%");
             $(this).find(".calculated-results").css("font-size", "250%");
-        }
+        },
+        cursor: "crosshair",
+        cursorAt: { top: $(this).height()/8, left: $(this).width()/8 }
     });
 
     $("#mainContainer div" ).draggable({ stack: "#mainContainer div" });
@@ -178,7 +180,7 @@ var updateClock = function() {
 var verifyResult = function(result) {
     if (result === 24) {
         score += 1000;
-        next();
+        next(false);
         document.getElementById("score").innerHTML = score < 1000 ? "0" + score : score;
     }
 };
@@ -194,15 +196,17 @@ var reset = function() {
     updateCardDisplay();
 };
 
-var next = function() {
+var next = function(clickedSkip) {
     randomize();
     reset();
 
-    skips--;
-    if (skips === 0) {
-        $('#skip').addClass('ui-disabled');
+    if (clickedSkip) {
+        skips--;
+        if (skips === 0) {
+            $('#skip').addClass('ui-disabled');
+        }
+        var ele = document.getElementById("skip").innerHTML = "Skip: " + skips;
     }
-    var ele = document.getElementById("skip").innerHTML = "Skip: " + skips;
 };
 
 var updateCardDisplay = function() {
