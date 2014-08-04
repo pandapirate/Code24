@@ -102,10 +102,10 @@ var solve = function(a, b, c, d) {
 };
 
 var input = [];
-var imageNames = [];
+//var imageNames = [];
 var randomize = function() {
     finalSolution = "";
-    imageNames = [];
+//    imageNames = [];
     while (true) {
         input[0] = (Math.floor(Math.random() * 13 + 1));
         input[1] = (Math.floor(Math.random() * 13 + 1));
@@ -122,17 +122,17 @@ var randomize = function() {
     }
     document.write("</div>");*/
 
-    var prefix = ["c", "s", "h", "d"];
-    for (var i in input) {
-        while (true) {
-            var rand = Math.floor(Math.random() * 4);
-            var name = prefix[rand] + input[i] + ".png";
-            if ($.inArray(imageNames, name) === -1) {
-                imageNames.push(name);
-                break;
-            }
-        }
-    }
+//    var prefix = ["c", "s", "h", "d"];
+//    for (var i in input) {
+//        while (true) {
+//            var rand = Math.floor(Math.random() * 4);
+//            var name = prefix[rand] + input[i] + ".png";
+//            if ($.inArray(imageNames, name) === -1) {
+//                imageNames.push(name);
+//                break;
+//            }
+//        }
+//    }
 //    console.log(imageNames);
 };
 
