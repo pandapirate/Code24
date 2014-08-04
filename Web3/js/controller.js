@@ -12,6 +12,7 @@ var right = 0;
 var target = null;
 var map = {};
 var randomBG = ["images/c.png", "images/d.png", "images/h.png", "images/s.png"];
+var randomMessage = ["Congratulations!", "Fantastic!", "Correct!", "Terrific!", "Wonderful!", "Keep Going!", "Like a Boss!"];
 
 var state = {
     card1_bg:"",
@@ -49,7 +50,7 @@ $(document).ready(function(){
     startClock();
 
     $("#undo").click(function(){undo();})
-    $("#reset").click(function(){reset();})
+    $("#reset").click(function(){showMessage();})
     $("#skip").click(function(){next(true);})
 
     $(".op-container").hide();
@@ -194,10 +195,21 @@ var verifyResult = function(result) {
         questionNumber += 1;
         next(false);
 
+        showMessage();
+
         if (questionNumber >= 5)
             window.location.href = "#scores";
     }
 };
+
+var showMessage = function() {
+    var rand = Math.floor(Math.random() * randomMessage.length);
+    $('#correct-message').html("<h1>"+randomMessage[rand]+"</h1>");
+    $('#correct-message').popup('open');
+    setTimeout(function () {
+        $('#correct-message').popup('close');
+    }, 1500);
+}
 
 var undo = function() {
     console.log("Undo");
