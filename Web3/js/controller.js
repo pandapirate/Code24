@@ -206,7 +206,7 @@ var verifyResult = function(result) {
         next(false);
 
         showMessage();
-        
+
 //TODO: remove
 //        if (questionNumber >= 5)
 //            window.location.href = "#scores";
@@ -286,13 +286,32 @@ var next = function(clickedSkip) {
 
 var updateCardDisplay = function() {
     $('.card-container').show();
-    $('.card-container').find(".calculated-results").html("");
+//    $('.card-container').find(".calculated-results").html("");
 
-    $('#card1-container').css('background-image', "url(cards/" + imageNames[0] +")");
-    $('#card2-container').css('background-image', "url(cards/" + imageNames[1] +")");
-    $('#card3-container').css('background-image', "url(cards/" + imageNames[2] +")");
-    $('#card4-container').css('background-image', "url(cards/" + imageNames[3] +")");
+    $('#card1-container').css('background-image', "url(images/s.png)");
+    $('#card2-container').css('background-image', "url(images/h.png)");
+    $('#card3-container').css('background-image', "url(images/d.png)");
+    $('#card4-container').css('background-image', "url(images/c.png)");
+
+    $('#card1-container').find(".calculated-results").html("<h1>" + getNumber(input[0]) + "</h1>");
+    $('#card2-container').find(".calculated-results").html("<h1>" + getNumber(input[1]) + "</h1>");
+    $('#card3-container').find(".calculated-results").html("<h1>" + getNumber(input[2]) + "</h1>");
+    $('#card4-container').find(".calculated-results").html("<h1>" + getNumber(input[3]) + "</h1>");
+
 };
+
+var getNumber = function(inputNum) {
+    if (inputNum === 1)
+        return "A";
+    else if (inputNum === 11)
+        return "J";
+    else if (inputNum === 12)
+        return "Q";
+    else if (inputNum === 13)
+        return "K";
+    else
+        return "" + inputNum;
+}
 
 var updateState = function() {
     state.card1_bg = $("#card1-container").css("background-image");
