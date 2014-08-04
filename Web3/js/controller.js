@@ -6,11 +6,28 @@ var skips = 3;
 
 var myInterval = 0;
 
+var questionNumber = 0;
 var left = 0;
 var right = 0;
 var target = null;
 var map = {};
 var randomBG = ["images/c.png", "images/d.png", "images/h.png", "images/s.png"];
+
+var state = {
+    card1_bg:"",
+    card1_hidden:"",
+    card1_calc:"",
+    card2_bg:"",
+    card2_hidden:"",
+    card2_calc:"",
+    card3_bg:"",
+    card3_hidden:"",
+    card3_calc:"",
+    card4_bg:"",
+    card4_hidden:"",
+    card4_calc:"",
+    map:{}
+};
 
 $(document).ready(function(){
 //    console.log("Moved to game");
@@ -20,12 +37,15 @@ $(document).ready(function(){
 
     score = 0;
     time = 0;
+    questionNumber = 0;
     skips = 3;
     document.getElementById("skip").innerHTML = "Skip: " + skips;
+    document.getElementById("score").innerHTML = "0000";
     document.getElementById("timer").innerHTML = time;
     map = {'card1-container': input[0], 'card2-container': input[1], 'card3-container': input[2], 'card4-container': input[3]};
 
     $('#skip').removeClass('ui-disabled');
+    $('#undo').addClass('ui-disabled');
     startClock();
 
     $("#undo").click(function(){undo();})
@@ -33,6 +53,7 @@ $(document).ready(function(){
     $("#skip").click(function(){next(true);})
 
     $(".op-container").hide();
+//    updateState();
 
     $('.card-container').draggable({/*containment:"#mainContainer", */snap:".card-container", revert:true,  opacity:0.5,
         start: function(event, ui) {
@@ -115,11 +136,7 @@ var registerNumbers = function(num1, num2, t) {
 };
 
 var calculateAtPosition = function(draggable, op) {
-//    console.log(left);
-//    console.log(right);
-//    console.log(target);
-//    console.log(draggable);
-//    console.log(op);
+    updateState();
 
     var results = 0;
     if ($(op).hasClass("add"))
@@ -151,16 +168,8 @@ var calculateAtPosition = function(draggable, op) {
     if (used === 3) {
         verifyResult(results);
     }
-};
 
-var operationClick = function(op) {
-  console.log("Clicked function " + op);
-
-//  $('#operationMenu').popup('close');
-};
-
-var endGame = function() {
-    clearInterval(myInterval)
+    $("#undo").removeClass("ui-disabled");
 };
 
 var startClock = function() {
@@ -180,13 +189,55 @@ var updateClock = function() {
 var verifyResult = function(result) {
     if (result === 24) {
         score += 1000;
-        next(false);
         document.getElementById("score").innerHTML = score < 1000 ? "0" + score : score;
+
+        questionNumber += 1;
+        next(false);
+
+        if (questionNumber >= 5)
+            window.location.href = "#scores";
     }
 };
 
 var undo = function() {
     console.log("Undo");
+    used --;
+
+    if (state.card1_hidden)
+        $("#card1-container").hide();
+    else {
+        $("#card1-container").show();
+        $("#card1-container").css("background-image", state.card1_bg);
+        $("#card1-container").find(".calculated-results").html(state.card1_calc);
+    }
+
+    if (state.card2_hidden)
+        $("#card2-container").hide();
+    else {
+        $("#card2-container").show();
+        $("#card2-container").css("background-image", state.card2_bg);
+        $("#card2-container").find(".calculated-results").html(state.card2_calc);
+    }
+
+    if (state.card3_hidden)
+        $("#card3-container").hide();
+    else {
+        $("#card3-container").show();
+        $("#card3-container").css("background-image", state.card3_bg);
+        $("#card3-container").find(".calculated-results").html(state.card3_calc);
+    }
+
+    if (state.card4_hidden)
+        $("#card4-container").hide();
+    else {
+        $("#card4-container").show();
+        $("#card4-container").css("background-image", state.card4_bg);
+        $("#card4-container").find(".calculated-results").html(state.card4_calc);
+    }
+
+    map = state.map;
+
+    $("#undo").addClass("ui-disabled")
 }
 
 var reset = function() {
@@ -219,3 +270,23 @@ var updateCardDisplay = function() {
     $('#card4-container').css('background-image', "url(cards/" + imageNames[3] +")");
 };
 
+var updateState = function() {
+    state.card1_bg = $("#card1-container").css("background-image");
+    state.card1_hidden = $("#card1-container").is(":hidden");
+    state.card1_calc = $("#card1-container").find(".calculated-results").html()
+
+    state.card2_bg = $("#card2-container").css("background-image");
+    state.card2_hidden = $("#card2-container").is(":hidden");
+    state.card2_calc = $("#card2-container").find(".calculated-results").html()
+
+    state.card3_bg = $("#card3-container").css("background-image");
+    state.card3_hidden = $("#card3-container").is(":hidden");
+    state.card3_calc = $("#card3-container").find(".calculated-results").html()
+
+    state.card4_bg = $("#card4-container").css("background-image");
+    state.card4_hidden = $("#card4-container").is(":hidden");
+    state.card4_calc = $("#card4-container").find(".calculated-results").html()
+
+    state.map = jQuery.extend(true, {}, map);
+    console.log(state);
+}

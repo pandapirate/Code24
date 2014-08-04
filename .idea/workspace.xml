@@ -2,18 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="07329609-9a2f-430b-97ec-b76a86aa222b" name="Default" comment="">
+      <change type="DELETED" beforePath="C:\Project\Code24\Web3\mobile.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web3/js/controller.js" afterPath="$PROJECT_DIR$/Web3/js/controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web3/js/jquery.ui.touch-punch.min.js" afterPath="$PROJECT_DIR$/Web3/js/jquery.ui.touch-punch.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web3/index.html" afterPath="$PROJECT_DIR$/Web3/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Code24.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1407084687057" ignored="false" />
-    <file path="/index.html" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1407093749235" ignored="false" />
+    <file path="/index.html" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1407126925176" ignored="false" />
     <file path="/test.html" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1406074375900" ignored="false" />
     <file path="/style.css" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1407092781462" ignored="false" />
     <file path="/fragment.java" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1407004888511" ignored="false" />
     <file path="/mobile.html" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1407029373083" ignored="false" />
-    <file path="/controller.js" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1407119191216" ignored="false" />
+    <file path="/controller.js" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1407129118131" ignored="false" />
     <file path="/solver.js" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1407005984813" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -77,10 +79,10 @@
     <splitter split-orientation="horizontal" split-proportion="0.45348838">
       <split-first>
         <leaf>
-          <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Web3/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="76" column="161" selection-start="3585" selection-end="3585" vertical-scroll-proportion="1.5510597">
+                <state line="52" column="57" selection-start="2390" selection-end="2390" vertical-scroll-proportion="-19.84">
                   <folding>
                     <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                   </folding>
@@ -91,16 +93,16 @@
           <file leaf-file-name="controller.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Web3/js/controller.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="219" column="2" selection-start="6707" selection-end="6707" vertical-scroll-proportion="0.0">
+                <state line="270" column="2" selection-start="8164" selection-end="8164" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="solver.js" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="solver.js" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Web3/js/solver.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="128" column="56" selection-start="3899" selection-end="3899" vertical-scroll-proportion="0.0">
+                <state line="49" column="26" selection-start="1643" selection-end="1643" vertical-scroll-proportion="0.7881773">
                   <folding />
                 </state>
               </provider>
@@ -122,11 +124,20 @@
           <file leaf-file-name="controller.js" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Web3/js/controller.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="51" column="7" selection-start="1586" selection-end="1586" vertical-scroll-proportion="0.6764706">
+                <state line="281" column="29" selection-start="8648" selection-end="8648" vertical-scroll-proportion="0.68472904">
                   <folding>
-                    <element signature="e#2789#2818#0" expanded="false" />
-                    <element signature="e#2858#3783#0" expanded="false" />
+                    <element signature="e#3212#3241#0" expanded="false" />
+                    <element signature="e#3281#4206#0" expanded="false" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="DHTML.js" pinned="false" current="false" current-in-tab="false">
+            <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavascriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="608" column="20" selection-start="9004" selection-end="9004" vertical-scroll-proportion="0.0">
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -178,10 +189,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-9" />
-    <option name="y" value="-8" />
-    <option name="width" value="1696" />
-    <option name="height" value="1026" />
+    <option name="x" value="1" />
+    <option name="y" value="1" />
+    <option name="width" value="1678" />
+    <option name="height" value="1008" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -515,13 +526,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-8" width="1696" height="1026" extended-state="0" />
+    <frame x="1" y="1" width="1678" height="1008" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32911393" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33607522" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41374475" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -536,7 +547,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20257038" sideWeight="0.67012686" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20235148" sideWeight="0.6639248" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.325477" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -654,7 +665,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Web/old-main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Web/index.html">
@@ -667,33 +680,9 @@
         <state line="3" column="4" selection-start="45" selection-end="45" vertical-scroll-proportion="0.0569395" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web3/mobile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="28" selection-start="936" selection-end="936" vertical-scroll-proportion="0.5180573">
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavascriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1508" column="23" selection-start="24002" selection-end="24002" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Web3/js/jquery.ui.touch-punch.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="4" selection-start="2793" selection-end="2793" vertical-scroll-proportion="0.6361446">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web3/js/solver.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="128" column="56" selection-start="3899" selection-end="3899" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -707,19 +696,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Web3/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="161" selection-start="3585" selection-end="3585" vertical-scroll-proportion="1.5510597">
+        <state line="52" column="57" selection-start="2390" selection-end="2390" vertical-scroll-proportion="-19.84">
           <folding>
             <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Web3/js/solver.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="26" selection-start="1643" selection-end="1643" vertical-scroll-proportion="0.7881773">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavascriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="608" column="20" selection-start="9004" selection-end="9004" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Web3/js/controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="7" selection-start="1586" selection-end="1586" vertical-scroll-proportion="0.6764706">
+        <state line="281" column="29" selection-start="8648" selection-end="8648" vertical-scroll-proportion="0.68472904">
           <folding>
-            <element signature="e#2789#2818#0" expanded="false" />
-            <element signature="e#2858#3783#0" expanded="false" />
+            <element signature="e#3212#3241#0" expanded="false" />
+            <element signature="e#3281#4206#0" expanded="false" />
           </folding>
         </state>
       </provider>
