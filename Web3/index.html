@@ -4,6 +4,8 @@
     <title>24</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
+    <!--<link rel="stylesheet" href="themes/code24.min.css" />-->
+    <!--<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />-->
     <link rel="stylesheet" href="css/style.css">
 
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
@@ -12,13 +14,14 @@
     <script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
     <script type="text/javascript" src="js/solver.js"></script>
     <script type="text/javascript" src="js/controller.js"></script>
+    <script type="text/javascript" src="js/score.js"></script>
 </head>
 <body>
 
 <div data-role="page" id="main">
     <div data-role="header">
         <!--<a class="ui-btn ui-btn-left" id="score">0000</a>-->
-        <div class="ui-block-a"><a href="#How-to-Play" data-rel="popup" class="ui-btn ui-btn-left ui-icon-info ui-btn-icon-left" data-transition="pop">How-to-Play</a></div>
+        <div class="ui-block-a"><a href="#How-to-Play" data-rel="popup" class="ui-btn ui-btn-left ui-icon-info ui-btn-icon-left" data-transition="pop">&nbsp;Help</a></div>
         <h1>Solve 24</h1>
         <a class="ui-btn ui-btn-right" id="timer">99</a>
 
@@ -71,7 +74,7 @@
     </div>
 
     <div data-role="footer">
-        <div class="ui-grid-b" style="margin-top: 4px; margin-left: 5px; margin-right: 5px;">
+        <div class="ui-grid-b" id="footer-menu" style="margin-top: 4px; margin-left: 5px; margin-right: 5px;">
             <div class="ui-block-a"><button id="undo">Undo</button></div>
             <div class="ui-block-b"><button id="reset">Reset</button></div>
             <div class="ui-block-c"><button id="skip">Skip</button></div>
@@ -87,14 +90,22 @@
             <h1>How to Play</h1>
         </div>
         <div role="main" class="ui-content">
-            <h5 class="ui-title">Combine 4 cards with +, &minus;, &times;, / to calculate the number 24. Round ends after 4 problems solved. </h5>
+            <h4 class="ui-title">Combine 4 cards with +, &minus;, &times;, / to calculate the number 24.</h4>
+            <h4 class="ui-title">Instructions:</h4>
+            <ol>
+                <li>Drag a card to an operation on another card to combine.</li>
+                <li>Repeat until all cards are used to form 24.</li>
+            </ol>
+            <h4 class="ui-title">Game Mode:</h4>
             <ul>
-                <li>Drag a card on top of an operation in another cards to combine.</li>
-                <li>Dragged card will be the first operand, target card will be the second.</li>
-                <li>A new card with the result replaces the two cards used.</li>
-                <li>Continue until all 4 cards have been used and you reach the number 24.</li>
+                <li><b>Classic</b>: 4 problems per round, faster time yields higher score</li>
+                <li><b>Practice</b>: unlimited problems. Click timer to toggle</li>
             </ul>
         </div>
+    </div>
+
+    <div data-role="popup" data-transition="pop" id="solution-message">
+        <p>Correct</p>
     </div>
 </div>
 

@@ -1,6 +1,5 @@
 var used = 0;
 
-//var score = 0;
 var time = 0;
 var skips = 3;
 
@@ -16,6 +15,8 @@ var randomMessage = ["Congratulations!", "Fantastic!", "Correct!", "Terrific!", 
 
 var headerSize = 0;
 var footerSize = 0;
+
+var practiceMode = false;
 
 var state = {
     card1_bg:"",
@@ -35,26 +36,17 @@ var state = {
 
 $(document).ready(function(){
 //    console.log("Moved to game");
-    randomize();
     resizeMainDiv(this);
-    updateCardDisplay();
+    startGame();
+    practiceMode = false;
 
-//    score = 0;
-    time = 0;
-    questionNumber = 0;
-    skips = 3;
-    document.getElementById("skip").innerHTML = "Skip: " + skips;
-//    document.getElementById("score").innerHTML = "0000";
-    document.getElementById("timer").innerHTML = time;
     map = {'card1-container': input[0], 'card2-container': input[1], 'card3-container': input[2], 'card4-container': input[3]};
-
-    $('#skip').removeClass('ui-disabled');
-    $('#undo').addClass('ui-disabled');
-    startClock();
 
     $("#undo").click(function(){undo();})
     $("#reset").click(function(){reset();})
     $("#skip").click(function(){next(true);})
+
+    $("#timer").click(function(){togglePracticeMode();})
 
     $(".op-container").hide();
 //    updateState();
@@ -72,7 +64,7 @@ $(document).ready(function(){
 //            console.log("return")
             $(this).css("width", "50%");
             $(this).css("height", "50%");
-            $(this).find(".calculated-results").css("font-size", "250%");
+            $(this).find(".calculated-results").css("font-size", "240%");
         },
         cursor: "crosshair",
         cursorAt: { top: $(this).height()/8, left: $(this).width()/8 }
@@ -129,10 +121,10 @@ $(window).resize(function() {
 
 var resizeMainDiv = function (main) {
     if (headerSize === 0)
-        headerSize = $(main).find('[data-role="header"]').height()
+        headerSize = $(main).find('[data-role="header"]').height();
 
     if (footerSize === 0)
-        footerSize = $(main).find('[data-role="footer"]').height()
+        footerSize = $(main).find('[data-role="footer"]').height();
 
     var mainHeight = $(window).height() - headerSize - footerSize -2;
 //    $(main).find('[data-role="main"]').height(mainHeight);
@@ -215,17 +207,13 @@ var updateClock = function() {
 
 var verifyResult = function(result) {
     if (result === 24) {
-//        score += 1000;
-//        document.getElementById("score").innerHTML = score < 1000 ? "0" + score : score;
-
         questionNumber += 1;
         next(false);
 
         showMessage();
 
-//TODO: remove
-//        if (questionNumber >= 5)
-//            window.location.href = "#scores";
+        if (questionNumber > 4 && !practiceMode)
+            window.location.href = "#scores";
     }
 };
 
@@ -291,7 +279,7 @@ var next = function(clickedSkip) {
     randomize();
     reset();
 
-    if (clickedSkip) {
+    if (clickedSkip && !practiceMode) {
         skips--;
         if (skips === 0) {
             $('#skip').addClass('ui-disabled');
@@ -299,6 +287,48 @@ var next = function(clickedSkip) {
         var ele = document.getElementById("skip").innerHTML = "Skip: " + skips;
     }
 };
+
+var togglePracticeMode = function() {
+    practiceMode = !practiceMode;
+
+    if (practiceMode) {
+        reset();
+        clearInterval(myInterval);
+        $("#timer").html("Practice");
+        $("#skip").html("Skip");
+
+        var ele = $("#footer-menu");
+        ele.addClass("ui-grid-c");
+        ele.removeClass("ui-grid-b");
+
+        ele.append("<div class='ui-block-d' id='hint-button'><button id='hint'>Answer</button></div>").trigger('create');
+        $("#hint").click(function(){showAnswer();})
+
+    } else {
+        startGame();
+
+        $("#footer-menu").removeClass("ui-grid-c");
+        $("#footer-menu").addClass("ui-grid-b");
+        $("#hint-button").remove();
+    }
+}
+
+var startGame = function() {
+    next(false);
+    time = 0;
+    $("#timer").html(time);
+    startClock();
+    skips = 3;
+    questionNumber = 0;
+    $("#skip").html("Skip: 3");
+    $('#skip').removeClass('ui-disabled');
+    $('#undo').addClass('ui-disabled');
+}
+
+var showAnswer = function() {
+    $('#solution-message').html("<h1>"+finalSolution+"</h1>");
+    $('#solution-message').popup('open');
+}
 
 var updateCardDisplay = function() {
     $('.card-container').show();
