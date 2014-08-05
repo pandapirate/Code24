@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="07329609-9a2f-430b-97ec-b76a86aa222b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web3/js/jquery.cookie.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web3/js/controller.js" afterPath="$PROJECT_DIR$/Web3/js/controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web3/index.html" afterPath="$PROJECT_DIR$/Web3/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web3/js/score.js" afterPath="$PROJECT_DIR$/Web3/js/score.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web3/css/style.css" afterPath="$PROJECT_DIR$/Web3/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web3/js/solver.js" afterPath="$PROJECT_DIR$/Web3/js/solver.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Code24.iws" />
@@ -17,7 +14,7 @@
     <file path="/style.css" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1407221908474" ignored="false" />
     <file path="/fragment.java" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1407004888511" ignored="false" />
     <file path="/mobile.html" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1407029373083" ignored="false" />
-    <file path="/controller.js" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1407219907440" ignored="false" />
+    <file path="/controller.js" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1407223823670" ignored="false" />
     <file path="/solver.js" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1407005984813" ignored="false" />
     <file path="/score.js" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1407222965127" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -83,7 +80,7 @@
       <file leaf-file-name="controller.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Web3/js/controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="216" column="22" selection-start="6393" selection-end="6393" vertical-scroll-proportion="0.0">
+            <state line="336" column="0" selection-start="9703" selection-end="9703" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -92,11 +89,20 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Web3/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="100" column="16" selection-start="4642" selection-end="4642" vertical-scroll-proportion="0.7823961">
+            <state line="87" column="0" selection-start="4043" selection-end="4043" vertical-scroll-proportion="0.52811736">
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h1#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="solver.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Web3/js/solver.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="54" column="25" selection-start="1795" selection-end="1795" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -151,12 +157,12 @@
         <option value="$PROJECT_DIR$/Web2/js/controller.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/Web3/js/jquery.ui.touch-punch.min.js" />
-        <option value="$PROJECT_DIR$/Web3/js/solver.js" />
         <option value="$PROJECT_DIR$/Web3/js/jquery.cookie.js" />
         <option value="$PROJECT_DIR$/Web3/css/style.css" />
         <option value="$PROJECT_DIR$/Web3/index.html" />
         <option value="$PROJECT_DIR$/Web3/js/score.js" />
         <option value="$PROJECT_DIR$/Web3/js/controller.js" />
+        <option value="$PROJECT_DIR$/Web3/js/solver.js" />
       </list>
     </option>
   </component>
@@ -659,13 +665,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web3/js/solver.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="129" column="41" selection-start="3955" selection-end="3955" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavascriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1460" column="0" selection-start="23078" selection-end="23078" vertical-scroll-proportion="0.33266932">
@@ -702,14 +701,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Web3/js/controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="216" column="22" selection-start="6393" selection-end="6393" vertical-scroll-proportion="0.0">
+        <state line="336" column="0" selection-start="9703" selection-end="9703" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web3/js/solver.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="25" selection-start="1795" selection-end="1795" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Web3/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="16" selection-start="4642" selection-end="4642" vertical-scroll-proportion="0.7823961">
+        <state line="87" column="0" selection-start="4043" selection-end="4043" vertical-scroll-proportion="0.52811736">
           <folding>
             <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h1#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />

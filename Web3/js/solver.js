@@ -52,7 +52,7 @@ function Node (left, right, op, group, base) {
             case "MULTIPLY":
                 return "&times;";
             case "DIVIDE":
-                return "&divide;";
+                return "/";
         }
         return "";
     }

@@ -331,7 +331,7 @@ var startGame = function() {
 }
 
 var showAnswer = function() {
-    $('#solution-message').html("<h1>"+finalSolution+"</h1>");
+    $('#solution-message').html("<h1>"+finalSolution.substring(1, finalSolution.length-1)+"</h1>");
     $('#solution-message').popup('open');
 }
 
