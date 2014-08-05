@@ -5,6 +5,7 @@ var skips = 3;
 
 var myInterval = 0;
 
+var timePerQ = [];
 var questionNumber = 0;
 var left = 0;
 var right = 0;
@@ -34,8 +35,9 @@ var state = {
     map:{}
 };
 
-$(document).ready(function(){
-//    console.log("Moved to game");
+//$(document).ready(function(){
+$(document).delegate('#main', 'pageshow', function () {
+    console.log("Moved to game");
     resizeMainDiv(this);
     startGame();
     practiceMode = false;
@@ -51,9 +53,8 @@ $(document).ready(function(){
     $(".op-container").hide();
 //    updateState();
 
-    $('.card-container').draggable({/*containment:"#mainContainer", */snap:".card-container", revert:true,  opacity:0.5,
+    $('.card-container').draggable({snap:".card-container", revert:true,  opacity:0.5,
         scrollSensitivity: 400,
-//        scroll: false,
         start: function(event, ui) {
 //            console.log("start")
             $(this).css("width", "25%");
@@ -142,9 +143,9 @@ var resizeMainDiv = function (main) {
     $('#card4-container').css('top', mainHeight/2);
     $('#card4-container').css('left', mainWidth/2);
 
-    console.log($(main).find('[data-role="header"]').height());
-    console.log($(main).find('[data-role="footer"]').height());
-    console.log($(window).width()+ ", " + mainHeight);
+//    console.log($(main).find('[data-role="header"]').height());
+//    console.log($(main).find('[data-role="footer"]').height());
+//    console.log($(window).width()+ ", " + mainHeight);
 }
 
 var registerNumbers = function(num1, num2, t) {
@@ -210,9 +211,12 @@ var verifyResult = function(result) {
         questionNumber += 1;
         next(false);
 
+        timePerQ.push(time);
+        console.log(timePerQ);
+
         showMessage();
 
-        if (questionNumber > 4 && !practiceMode)
+        if (questionNumber > 2 && !practiceMode)
             window.location.href = "#scores";
     }
 };
@@ -316,10 +320,11 @@ var togglePracticeMode = function() {
 var startGame = function() {
     next(false);
     time = 0;
+    questionNumber = 0;
+    timePerQ = [];
     $("#timer").html(time);
     startClock();
     skips = 3;
-    questionNumber = 0;
     $("#skip").html("Skip: 3");
     $('#skip').removeClass('ui-disabled');
     $('#undo').addClass('ui-disabled');
