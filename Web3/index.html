@@ -15,6 +15,7 @@
     <script type="text/javascript" src="js/solver.js"></script>
     <script type="text/javascript" src="js/controller.js"></script>
     <script type="text/javascript" src="js/score.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
 </head>
 <body>
 
@@ -98,7 +99,7 @@
             </ol>
             <h4 class="ui-title">Game Mode:</h4>
             <ul>
-                <li><b>Classic</b>: 4 problems per round, faster time yields higher score</li>
+                <li><b>Classic</b>: 3 problems per round, faster time yields higher score</li>
                 <li><b>Practice</b>: unlimited problems. Click timer to toggle</li>
             </ul>
         </div>
@@ -116,12 +117,27 @@
     </div>
 
     <div data-role="main" class="ui-content">
-        <h2>To Do:</h2>
-        <ol data-role="listview" data-inset="true">
-            <li>List Item</li>
-            <li>List Item</li>
-            <li>List Item</li>
-        </ol>
+        <h1 style="margin:-7px 0 0 -7px;">Scores</h1>
+        <table data-role="table" id="score-table" data-mode="toggle" class="table-stroke">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Time(s)</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+    <div data-role="popup" data-transition="pop" id="highscore-message">
+        <div data-role="header" data-theme="a">
+            <h1>Congrats</h1>
+        </div>
+        <div role="main" class="ui-content">
+            <p>You have set a new high score!</p>
+        </div>
     </div>
 </div>
 
