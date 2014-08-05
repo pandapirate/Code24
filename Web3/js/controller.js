@@ -1,6 +1,6 @@
 var used = 0;
 
-var score = 0;
+//var score = 0;
 var time = 0;
 var skips = 3;
 
@@ -13,6 +13,9 @@ var target = null;
 var map = {};
 var randomBG = ["images/c.png", "images/d.png", "images/h.png", "images/s.png"];
 var randomMessage = ["Congratulations!", "Fantastic!", "Correct!", "Terrific!", "Wonderful!", "Keep Going!", "Like a Boss!"];
+
+var headerSize = 0;
+var footerSize = 0;
 
 var state = {
     card1_bg:"",
@@ -36,12 +39,12 @@ $(document).ready(function(){
     resizeMainDiv(this);
     updateCardDisplay();
 
-    score = 0;
+//    score = 0;
     time = 0;
     questionNumber = 0;
     skips = 3;
     document.getElementById("skip").innerHTML = "Skip: " + skips;
-    document.getElementById("score").innerHTML = "0000";
+//    document.getElementById("score").innerHTML = "0000";
     document.getElementById("timer").innerHTML = time;
     map = {'card1-container': input[0], 'card2-container': input[1], 'card3-container': input[2], 'card4-container': input[3]};
 
@@ -60,13 +63,13 @@ $(document).ready(function(){
         scrollSensitivity: 400,
 //        scroll: false,
         start: function(event, ui) {
-            console.log("start")
+//            console.log("start")
             $(this).css("width", "25%");
             $(this).css("height", "25%");
             $(this).find(".calculated-results").css("font-size", "100%");
         },
         stop: function( event, ui ) {
-            console.log("return")
+//            console.log("return")
             $(this).css("width", "50%");
             $(this).css("height", "50%");
             $(this).find(".calculated-results").css("font-size", "250%");
@@ -98,14 +101,15 @@ $(document).ready(function(){
     $('.operations').droppable({
         accept: ".card-container",
         over: function( event, ui ) {
-            console.log("in");
+//            console.log("in");
             $(this).html("<div class='highlight'></div>");
         },
         out: function( event, ui ) {
-            console.log("out");
+//            console.log("out");
             $(this).html("");
         },
         drop: function (event, ui) {
+            $(this).html("");
             var draggableId = ui.draggable.attr("id");
             var droppableClass = $(this).attr("class");
             calculateAtPosition(ui.draggable, this);
@@ -114,12 +118,23 @@ $(document).ready(function(){
     });
 });
 
-$( document ).on( "popupbeforeopen", "#operationMenu", function() {
-    console.log("ahhhh");
+$( window ).on( "orientationchange", function( event ) {
+    resizeMainDiv();
+});
+
+$(window).resize(function() {
+//    console.log("Screen size changed");
+    resizeMainDiv();
 });
 
 var resizeMainDiv = function (main) {
-    var mainHeight = $(window).height() - $(main).find('[data-role="header"]').height() - $(main).find('[data-role="footer"]').height() -5;
+    if (headerSize === 0)
+        headerSize = $(main).find('[data-role="header"]').height()
+
+    if (footerSize === 0)
+        footerSize = $(main).find('[data-role="footer"]').height()
+
+    var mainHeight = $(window).height() - headerSize - footerSize -2;
 //    $(main).find('[data-role="main"]').height(mainHeight);
     var mainWidth = $(window).width();
     $('#mainContainer').css('top', $(main).find('[data-role="header"]').height());
@@ -135,8 +150,9 @@ var resizeMainDiv = function (main) {
     $('#card4-container').css('top', mainHeight/2);
     $('#card4-container').css('left', mainWidth/2);
 
-//    console.log($(main).find('[data-role="header"]').height());
-//    console.log($(window).width()+ ", " + mainHeight);
+    console.log($(main).find('[data-role="header"]').height());
+    console.log($(main).find('[data-role="footer"]').height());
+    console.log($(window).width()+ ", " + mainHeight);
 }
 
 var registerNumbers = function(num1, num2, t) {
@@ -159,7 +175,7 @@ var calculateAtPosition = function(draggable, op) {
     else if ($(op).hasClass("divide"))
         results = left / right;
 
-    console.log(results);
+//    console.log(results);
     var rand = Math.floor(Math.random() * 4);
     $(target).css("background-image", "url(" + randomBG[rand] +")"); //change bg to random
 
@@ -167,14 +183,14 @@ var calculateAtPosition = function(draggable, op) {
     if (results - Math.floor(results) > 0)
         resultString = results.toFixed(2);
 
-    $(target).find(".calculated-results").html("<h1>" + resultString + "</h1>");
+    $(target).find(".calculated-results").html("<h1>" + getNumber(resultString) + "</h1>");
     draggable.hide();
 
     delete map[draggable.attr("id")];
     used++;
 
     map[$(target).attr("id")] = results;
-    console.log(map);
+//    console.log(map);
 
     if (used === 3) {
         verifyResult(results);
@@ -199,8 +215,8 @@ var updateClock = function() {
 
 var verifyResult = function(result) {
     if (result === 24) {
-        score += 1000;
-        document.getElementById("score").innerHTML = score < 1000 ? "0" + score : score;
+//        score += 1000;
+//        document.getElementById("score").innerHTML = score < 1000 ? "0" + score : score;
 
         questionNumber += 1;
         next(false);
@@ -331,5 +347,5 @@ var updateState = function() {
     state.card4_calc = $("#card4-container").find(".calculated-results").html()
 
     state.map = jQuery.extend(true, {}, map);
-    console.log(state);
+//    console.log(state);
 }

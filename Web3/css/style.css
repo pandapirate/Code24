@@ -13,16 +13,22 @@
     width: 50%; height: 50%;
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    /*line-height: 100%;*/
+    line-height: 100%;
     text-align: center;
 
 }
 
 .calculated-results {
+    font-size: 250%;
     display: inline-block;
     vertical-align: middle;
-    font-size: 250%;
-    line-height: normal;
+}
+
+.aligner {
+    height: 100%;
+    width: 0;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 #mainContainer {

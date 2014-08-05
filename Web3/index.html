@@ -17,7 +17,8 @@
 
 <div data-role="page" id="main">
     <div data-role="header">
-        <a class="ui-btn ui-btn-left" id="score">0000</a>
+        <!--<a class="ui-btn ui-btn-left" id="score">0000</a>-->
+        <div class="ui-block-a"><a href="#How-to-Play" data-rel="popup" class="ui-btn ui-btn-left ui-icon-info ui-btn-icon-left" data-transition="pop">How-to-Play</a></div>
         <h1>Solve 24</h1>
         <a class="ui-btn ui-btn-right" id="timer">99</a>
 
@@ -27,6 +28,7 @@
         <div id="mainContainer">
             <script></script>
             <div id="card1-container" class="card-container">
+                <span class="aligner"></span>
                 <span class='calculated-results'></span>
                 <div class="op-container" id="card1-op">
                     <div class="operations add"></div>
@@ -36,6 +38,7 @@
                 </div>
             </div>
             <div id="card2-container" class="card-container">
+                <span class="aligner"></span>
                 <span class='calculated-results'></span>
                 <div class="op-container" id="card2-op">
                     <div class="operations add"></div>
@@ -45,6 +48,7 @@
                 </div>
             </div>
             <div id="card3-container" class="card-container">
+                <span class="aligner"></span>
                 <span class='calculated-results'></span>
                 <div class="op-container" id="card3-op">
                     <div class="operations add"></div>
@@ -54,6 +58,7 @@
                 </div>
             </div>
             <div id="card4-container" class="card-container">
+                <span class="aligner"></span>
                 <span class='calculated-results'></span>
                 <div class="op-container" id="card4-op">
                     <div class="operations add"></div>
@@ -67,8 +72,6 @@
 
     <div data-role="footer">
         <div class="ui-grid-b" style="margin-top: 4px; margin-left: 5px; margin-right: 5px;">
-            <!--<div class="ui-block-a"><a href="#correct-message" data-rel="popup" class="ui-btn">How-to-Play</a> &lt;!&ndash;<button id="undo">Undo</button>&ndash;&gt;</div>-->
-            <!--<div class="ui-block-a"><a href="#How-to-Play" data-rel="popup" class="ui-btn" data-transition="pop">How-to-Play</a> &lt;!&ndash;<button id="undo">Undo</button>&ndash;&gt;</div>-->
             <div class="ui-block-a"><button id="undo">Undo</button></div>
             <div class="ui-block-b"><button id="reset">Reset</button></div>
             <div class="ui-block-c"><button id="skip">Skip</button></div>
@@ -79,16 +82,26 @@
         <p>Correct</p>
     </div>
 
-    <!--<div data-role="popup" id="How-to-Play">-->
-        <!--<p>Drag the cards on top of another card to an operation to apply. The dragged number will be the first operator. Numbers are between 1 and 13. Have Fun!</p>-->
-    <!--</div>-->
+    <div data-role="popup" id="How-to-Play">
+        <div data-role="header" data-theme="a">
+            <h1>How to Play</h1>
+        </div>
+        <div role="main" class="ui-content">
+            <h5 class="ui-title">Combine 4 cards with +, &minus;, &times;, / to calculate the number 24. Round ends after 4 problems solved. </h5>
+            <ul>
+                <li>Drag a card on top of an operation in another cards to combine.</li>
+                <li>Dragged card will be the first operand, target card will be the second.</li>
+                <li>A new card with the result replaces the two cards used.</li>
+                <li>Continue until all 4 cards have been used and you reach the number 24.</li>
+            </ul>
+        </div>
+    </div>
 </div>
 
 <div data-role="page" id="scores">
     <div data-role="header">
-        <a href="#main" class="ui-btn ui-btn-left ui-icon-home ui-btn-icon-left ui-alt-icon">Back</a>
-        <h1>24</h1>
-
+        <a href="#main" class="ui-btn ui-btn-left ui-icon-recycle ui-btn-icon-left ui-alt-icon">New Game</a>
+        <h1>Solve 24</h1>
     </div>
 
     <div data-role="main" class="ui-content">
