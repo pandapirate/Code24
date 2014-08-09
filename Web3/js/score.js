@@ -53,7 +53,7 @@ var updateScore = function(totalTime, totalScore) {
     var timeDisplay = curTime === 0 ? "N/A" : curTime;
     var scoreDisplay = curScore === 0 ? "N/A" : curScore;
 
-    $("#score-table > tbody").append("<tr><th><h4>Best</h4></th><th><h4>"+timeDisplay+"</h4></th><th><h4>"+scoreDisplay+"</h4></th></tr>");
+    $("#score-table > tbody").append("<tr style='color:green;'><th><h4>Record</h4></th><th><h4>"+timeDisplay+"</h4></th><th><h4>"+scoreDisplay+"</h4></th></tr>");
 
     if (totalScore > curScore) {
 //        console.log("new");
