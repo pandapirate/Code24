@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="07329609-9a2f-430b-97ec-b76a86aa222b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web3/js/controller.js" afterPath="$PROJECT_DIR$/Web3/js/controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web3/index.html" afterPath="$PROJECT_DIR$/Web3/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web3/js/score.js" afterPath="$PROJECT_DIR$/Web3/js/score.js" />
     </list>
     <ignored path="Code24.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -14,7 +12,7 @@
     <file path="/style.css" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1407221908474" ignored="false" />
     <file path="/fragment.java" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1407004888511" ignored="false" />
     <file path="/mobile.html" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1407029373083" ignored="false" />
-    <file path="/controller.js" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1407556437415" ignored="false" />
+    <file path="/controller.js" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1407557113421" ignored="false" />
     <file path="/solver.js" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1407005984813" ignored="false" />
     <file path="/score.js" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1407555443692" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -82,7 +80,7 @@
           <file leaf-file-name="controller.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Web3/js/controller.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="312" column="0" selection-start="8956" selection-end="8956" vertical-scroll-proportion="0.0">
+                <state line="313" column="0" selection-start="8984" selection-end="8984" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -134,7 +132,7 @@
           <file leaf-file-name="controller.js" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Web3/js/controller.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="209" column="13" selection-start="6099" selection-end="6099" vertical-scroll-proportion="0.9298246">
+                <state line="202" column="2" selection-start="5832" selection-end="5832" vertical-scroll-proportion="0.68401486">
                   <folding />
                 </state>
               </provider>
@@ -667,7 +665,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Web3/js/controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="209" column="13" selection-start="6099" selection-end="6099" vertical-scroll-proportion="0.9298246">
+        <state line="202" column="2" selection-start="5832" selection-end="5832" vertical-scroll-proportion="0.68401486">
           <folding />
         </state>
       </provider>

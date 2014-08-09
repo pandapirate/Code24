@@ -194,7 +194,10 @@ var verifyResult = function(result) {
         showMessage();
 
         setTimeout(function () {
-            next(false);
+            if (questionNumber < 3 || practiceMode)
+                next(false);
+            else
+                (window.location.href = "#scores");
         }, 1500);
     }
 };
@@ -205,9 +208,7 @@ var showMessage = function() {
     $('#correct-message').popup('open');
     setTimeout(function () {
         $('#correct-message').popup('close');
-        if (questionNumber > 2 && !practiceMode)
-            (window.location.href = "#scores");
-    }, 1500);
+    }, 1400);
 }
 
 var undo = function() {
