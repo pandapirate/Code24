@@ -1,5 +1,3 @@
-var used = 0;
-
 var time = 0;
 var skips = 3;
 
@@ -35,20 +33,20 @@ var state = {
     map:{}
 };
 
-//$(document).ready(function(){
+$(document).ready(function(){
+        $("#undo").click(function(){undo();})
+        $("#reset").click(function(){reset();})
+        $("#skip").click(function(){next(true);})
+
+        $("#timer").click(function(){togglePracticeMode();})
+});
+
 $(document).delegate('#main', 'pageshow', function () {
-    console.log("Moved to game");
     resizeMainDiv(this);
     startGame();
     practiceMode = false;
 
     map = {'card1-container': input[0], 'card2-container': input[1], 'card3-container': input[2], 'card4-container': input[3]};
-
-    $("#undo").click(function(){undo();})
-    $("#reset").click(function(){reset();})
-    $("#skip").click(function(){next(true);})
-
-    $("#timer").click(function(){togglePracticeMode();})
 
     $(".op-container").hide();
 //    updateState();
@@ -56,13 +54,11 @@ $(document).delegate('#main', 'pageshow', function () {
     $('.card-container').draggable({snap:".card-container", revert:true,  opacity:0.5,
         scrollSensitivity: 400,
         start: function(event, ui) {
-//            console.log("start")
             $(this).css("width", "25%");
             $(this).css("height", "25%");
             $(this).find(".calculated-results").css("font-size", "100%");
         },
         stop: function( event, ui ) {
-//            console.log("return")
             $(this).css("width", "50%");
             $(this).css("height", "50%");
             $(this).find(".calculated-results").css("font-size", "240%");
@@ -75,17 +71,14 @@ $(document).delegate('#main', 'pageshow', function () {
     $('.card-container').droppable({
         accept: ".card-container",
         over: function( event, ui ) {
-//                    console.log("in");
             $(this).find(".op-container").show();
         },
         out: function( event, ui ) {
-//                    console.log("out");
             $(this).find(".op-container").hide();
         },
         drop: function( event, ui ) {
             var draggableId = ui.draggable.attr("id");
             var droppableId = $(this).attr("id");
-//            console.log(draggableId + " dropped on " + droppableId);
             registerNumbers(draggableId, droppableId, this);
             $(this).find(".op-container").hide();
         }
@@ -94,11 +87,9 @@ $(document).delegate('#main', 'pageshow', function () {
     $('.operations').droppable({
         accept: ".card-container",
         over: function( event, ui ) {
-//            console.log("in");
             $(this).html("<div class='highlight'></div>");
         },
         out: function( event, ui ) {
-//            console.log("out");
             $(this).html("");
         },
         drop: function (event, ui) {
@@ -106,7 +97,6 @@ $(document).delegate('#main', 'pageshow', function () {
             var draggableId = ui.draggable.attr("id");
             var droppableClass = $(this).attr("class");
             calculateAtPosition(ui.draggable, this);
-//            console.log(draggableId + " dropped on " + droppableClass);
         }
     });
 });
@@ -116,7 +106,6 @@ $( window ).on( "orientationchange", function( event ) {
 });
 
 $(window).resize(function() {
-//    console.log("Screen size changed");
     resizeMainDiv();
 });
 
@@ -128,7 +117,6 @@ var resizeMainDiv = function (main) {
         footerSize = $(main).find('[data-role="footer"]').height();
 
     var mainHeight = $(window).height() - headerSize - footerSize -2;
-//    $(main).find('[data-role="main"]').height(mainHeight);
     var mainWidth = $(window).width();
     $('#mainContainer').css('top', $(main).find('[data-role="header"]').height());
     $('#mainContainer').css('width', mainWidth);
@@ -142,10 +130,6 @@ var resizeMainDiv = function (main) {
     $('#card3-container').css('left', 0);
     $('#card4-container').css('top', mainHeight/2);
     $('#card4-container').css('left', mainWidth/2);
-
-//    console.log($(main).find('[data-role="header"]').height());
-//    console.log($(main).find('[data-role="footer"]').height());
-//    console.log($(window).width()+ ", " + mainHeight);
 }
 
 var registerNumbers = function(num1, num2, t) {
@@ -168,7 +152,6 @@ var calculateAtPosition = function(draggable, op) {
     else if ($(op).hasClass("divide"))
         results = left / right;
 
-//    console.log(results);
     var rand = Math.floor(Math.random() * 4);
     $(target).css("background-image", "url(" + randomBG[rand] +")"); //change bg to random
 
@@ -180,12 +163,10 @@ var calculateAtPosition = function(draggable, op) {
     draggable.hide();
 
     delete map[draggable.attr("id")];
-    used++;
 
     map[$(target).attr("id")] = results;
-//    console.log(map);
 
-    if (used === 3) {
+    if (Object.keys(map).length === 1) {
         verifyResult(results);
     }
 
@@ -209,15 +190,15 @@ var updateClock = function() {
 var verifyResult = function(result) {
     if (result === 24) {
         questionNumber += 1;
-        next(false);
-
-        timePerQ.push(time);
-        console.log(timePerQ);
-
+        timePerQ.push(time - questionNumber);
         showMessage();
 
-        if (questionNumber > 2 && !practiceMode)
-            window.location.href = "#scores";
+        setTimeout(function () {
+            if (questionNumber < 3 || practiceMode)
+                next(false);
+            else
+                (window.location.href = "#scores");
+        }, 1500);
     }
 };
 
@@ -227,12 +208,10 @@ var showMessage = function() {
     $('#correct-message').popup('open');
     setTimeout(function () {
         $('#correct-message').popup('close');
-    }, 1500);
+    }, 1400);
 }
 
 var undo = function() {
-    console.log("Undo");
-    used --;
 
     if (state.card1_hidden)
         $("#card1-container").hide();
@@ -272,7 +251,6 @@ var undo = function() {
 }
 
 var reset = function() {
-    used = 0;
     map = {'card1-container': input[0], 'card2-container': input[1], 'card3-container': input[2], 'card4-container': input[3]};
     $('#undo').addClass('ui-disabled');
 
@@ -282,7 +260,6 @@ var reset = function() {
 var next = function(clickedSkip) {
     randomize();
     reset();
-
     if (clickedSkip && !practiceMode) {
         skips--;
         if (skips === 0) {
@@ -382,5 +359,4 @@ var updateState = function() {
     state.card4_calc = $("#card4-container").find(".calculated-results").html()
 
     state.map = jQuery.extend(true, {}, map);
-//    console.log(state);
 }
