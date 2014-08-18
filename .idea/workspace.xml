@@ -2,22 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="07329609-9a2f-430b-97ec-b76a86aa222b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web3/js/controller.js" afterPath="$PROJECT_DIR$/Web3/js/controller.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web3/images/divide.png" afterPath="$PROJECT_DIR$/Web3/images/divide.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web3/images/minus.png" afterPath="$PROJECT_DIR$/Web3/images/minus.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web3/images/plus.png" afterPath="$PROJECT_DIR$/Web3/images/plus.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web3/images/times.png" afterPath="$PROJECT_DIR$/Web3/images/times.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Code24.iml" afterPath="$PROJECT_DIR$/Code24.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web3/index.html" afterPath="$PROJECT_DIR$/Web3/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web3/js/score.js" afterPath="$PROJECT_DIR$/Web3/js/score.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web3/css/style.css" afterPath="$PROJECT_DIR$/Web3/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Code24.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1407947539994" ignored="false" />
-    <file path="/index.html" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1407295579503" ignored="false" />
+    <file path="/Dummy.txt" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1408344931338" ignored="false" />
+    <file path="/index.html" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1408345339943" ignored="false" />
     <file path="/test.html" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1406074375900" ignored="false" />
-    <file path="/style.css" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1407221908474" ignored="false" />
+    <file path="/style.css" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1408345546273" ignored="false" />
     <file path="/fragment.java" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1407004888511" ignored="false" />
     <file path="/mobile.html" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1407029373083" ignored="false" />
     <file path="/controller.js" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1407223823670" ignored="false" />
     <file path="/solver.js" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1407005984813" ignored="false" />
     <file path="/score.js" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1407948865614" ignored="false" />
+    <file path="$PROJECT_DIR$/../CookieSlide/.idea/workspace.xml" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1408082911530" ignored="false" />
+    <file path="$PROJECT_DIR$/../CookieSlide/index.html" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1408069924099" ignored="false" />
+    <file path="$PROJECT_DIR$/../CookieSlide/js/app.js" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1408069900532" ignored="false" />
+    <file path="$PROJECT_DIR$/../CookieSlide/CookieSlide.iml" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1408069326689" ignored="false" />
+    <file path="$PROJECT_DIR$/../CookieSlide/css/style.css" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1408069784727" ignored="false" />
+    <file path="/app.js" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1408069895820" ignored="false" />
+    <file path="$PROJECT_DIR$/../CookieSlide/js/cookie.js" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1408082907269" ignored="false" />
+    <file path="/cookie.js" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1408070205063" ignored="false" />
+    <file path="/a.dummy" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1408345409404" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +95,7 @@
       <file leaf-file-name="controller.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Web3/js/controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="361" column="1" selection-start="11010" selection-end="11010" vertical-scroll-proportion="0.0">
+            <state line="168" column="18" selection-start="4988" selection-end="4989" vertical-scroll-proportion="-10.92">
               <folding />
             </state>
           </provider>
@@ -90,8 +104,11 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Web3/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="25" selection-start="1295" selection-end="1295" vertical-scroll-proportion="-17.28">
-              <folding />
+            <state line="18" column="43" selection-start="946" selection-end="946" vertical-scroll-proportion="-13.68">
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h1#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -105,33 +122,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Web3/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="82" column="16" selection-start="1462" selection-end="1462" vertical-scroll-proportion="0.0">
+            <state line="19" column="16" selection-start="527" selection-end="527" vertical-scroll-proportion="0.6528029">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="score.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="score.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Web3/js/score.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="51" selection-start="2348" selection-end="2348" vertical-scroll-proportion="0.8097503">
+            <state line="48" column="0" selection-start="1621" selection-end="1621" vertical-scroll-proportion="0.0">
               <folding>
                 <marker date="1407949081507" expanded="false" signature="921:932" placeholder="..." />
                 <marker date="1407949081507" expanded="false" signature="1203:1213" placeholder="..." />
-                <marker date="1407949081507" expanded="true" signature="1924:1936" placeholder="..." />
+                <marker date="1407949081507" expanded="false" signature="1924:1936" placeholder="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="workspace.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="399" column="22" selection-start="19546" selection-end="19546" vertical-scroll-proportion="-10.68">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -164,12 +172,12 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/Web3/js/jquery.ui.touch-punch.min.js" />
         <option value="$PROJECT_DIR$/Web3/js/jquery.cookie.js" />
-        <option value="$PROJECT_DIR$/Web3/css/style.css" />
         <option value="$PROJECT_DIR$/Web3/js/controller.js" />
         <option value="$PROJECT_DIR$/Web3/js/solver.js" />
-        <option value="$PROJECT_DIR$/Web3/index.html" />
         <option value="$PROJECT_DIR$/Web3/js/score.js" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
+        <option value="$PROJECT_DIR$/Web3/index.html" />
+        <option value="$PROJECT_DIR$/Web3/css/style.css" />
       </list>
     </option>
   </component>
@@ -284,20 +292,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Code24" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Code24" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value=".idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -307,7 +301,7 @@
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -520,6 +514,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33524683" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41374475" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -534,7 +529,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1744186" sideWeight="0.6639248" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1744186" sideWeight="0.66475314" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.325477" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -542,7 +537,6 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33607522" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -660,10 +654,19 @@
         <state line="99" column="9" selection-start="3335" selection-end="3335" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web3/js/controller.js">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="361" column="1" selection-start="11010" selection-end="11010" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="406" column="69" selection-start="19909" selection-end="19909" vertical-scroll-proportion="0.47198007" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web3/js/score.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="0" selection-start="1621" selection-end="1621" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1407949081507" expanded="false" signature="921:932" placeholder="..." />
+            <marker date="1407949081507" expanded="false" signature="1203:1213" placeholder="..." />
+            <marker date="1407949081507" expanded="false" signature="1924:1936" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -674,35 +677,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web3/css/style.css">
+    <entry file="file://$PROJECT_DIR$/Web3/js/controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="16" selection-start="1462" selection-end="1462" vertical-scroll-proportion="0.0">
+        <state line="168" column="18" selection-start="4988" selection-end="4989" vertical-scroll-proportion="-10.92">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Web3/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="25" selection-start="1295" selection-end="1295" vertical-scroll-proportion="-17.28">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="399" column="22" selection-start="19546" selection-end="19546" vertical-scroll-proportion="-10.68">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web3/js/score.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="51" selection-start="2348" selection-end="2348" vertical-scroll-proportion="0.8097503">
+        <state line="18" column="43" selection-start="946" selection-end="946" vertical-scroll-proportion="-13.68">
           <folding>
-            <marker date="1407949081507" expanded="false" signature="921:932" placeholder="..." />
-            <marker date="1407949081507" expanded="false" signature="1203:1213" placeholder="..." />
-            <marker date="1407949081507" expanded="true" signature="1924:1936" placeholder="..." />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h1#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web3/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="16" selection-start="527" selection-end="527" vertical-scroll-proportion="0.6528029">
+          <folding />
         </state>
       </provider>
     </entry>

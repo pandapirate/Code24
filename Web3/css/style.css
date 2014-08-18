@@ -15,7 +15,6 @@
     background-repeat: no-repeat;
     line-height: 100%;
     text-align: center;
-
 }
 
 .calculated-results {
@@ -82,7 +81,7 @@
 .highlight {
     width: 100%;
     height: 100%;
-    background-color: yellow;
+    background-color: #9ed9f2;
     opacity: 0.6;
 }
 
