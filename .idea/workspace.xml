@@ -2,25 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="07329609-9a2f-430b-97ec-b76a86aa222b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web3/images/divide.png" afterPath="$PROJECT_DIR$/Web3/images/divide.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web3/images/minus.png" afterPath="$PROJECT_DIR$/Web3/images/minus.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web3/images/plus.png" afterPath="$PROJECT_DIR$/Web3/images/plus.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web3/images/times.png" afterPath="$PROJECT_DIR$/Web3/images/times.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Code24.iml" afterPath="$PROJECT_DIR$/Code24.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web3/index.html" afterPath="$PROJECT_DIR$/Web3/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web3/css/style.css" afterPath="$PROJECT_DIR$/Web3/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web3/js/controller.js" afterPath="$PROJECT_DIR$/Web3/js/controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Code24.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1408344931338" ignored="false" />
+    <file path="/Dummy.txt" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1409700133709" ignored="false" />
     <file path="/index.html" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1408345339943" ignored="false" />
     <file path="/test.html" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1406074375900" ignored="false" />
     <file path="/style.css" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1408345546273" ignored="false" />
     <file path="/fragment.java" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1407004888511" ignored="false" />
     <file path="/mobile.html" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1407029373083" ignored="false" />
-    <file path="/controller.js" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1407223823670" ignored="false" />
+    <file path="/controller.js" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1409700835889" ignored="false" />
     <file path="/solver.js" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1407005984813" ignored="false" />
     <file path="/score.js" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1407948865614" ignored="false" />
     <file path="$PROJECT_DIR$/../CookieSlide/.idea/workspace.xml" changelist="07329609-9a2f-430b-97ec-b76a86aa222b" time="1408082911530" ignored="false" />
@@ -95,51 +88,17 @@
       <file leaf-file-name="controller.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Web3/js/controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="168" column="18" selection-start="4988" selection-end="4989" vertical-scroll-proportion="-10.92">
+            <state line="96" column="54" selection-start="2866" selection-end="2866" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Web3/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="43" selection-start="946" selection-end="946" vertical-scroll-proportion="-13.68">
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h1#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="solver.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Web3/js/solver.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="25" selection-start="1795" selection-end="1795" vertical-scroll-proportion="0.0">
+            <state line="30" column="25" selection-start="1592" selection-end="1592" vertical-scroll-proportion="0.41707316">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Web3/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="16" selection-start="527" selection-end="527" vertical-scroll-proportion="0.6528029">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="score.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Web3/js/score.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="0" selection-start="1621" selection-end="1621" vertical-scroll-proportion="0.0">
-              <folding>
-                <marker date="1407949081507" expanded="false" signature="921:932" placeholder="..." />
-                <marker date="1407949081507" expanded="false" signature="1203:1213" placeholder="..." />
-                <marker date="1407949081507" expanded="false" signature="1924:1936" placeholder="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -172,12 +131,12 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/Web3/js/jquery.ui.touch-punch.min.js" />
         <option value="$PROJECT_DIR$/Web3/js/jquery.cookie.js" />
-        <option value="$PROJECT_DIR$/Web3/js/controller.js" />
         <option value="$PROJECT_DIR$/Web3/js/solver.js" />
         <option value="$PROJECT_DIR$/Web3/js/score.js" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/Web3/index.html" />
         <option value="$PROJECT_DIR$/Web3/css/style.css" />
+        <option value="$PROJECT_DIR$/Web3/js/controller.js" />
       </list>
     </option>
   </component>
@@ -191,7 +150,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1696" />
+    <option name="width" value="1692" />
     <option name="height" value="1026" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -310,12 +269,12 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -385,19 +344,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -426,6 +372,19 @@
       <listeners />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -439,6 +398,13 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -460,13 +426,6 @@
       </option>
       <envs />
       <patterns />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -508,13 +467,12 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
+    <frame x="-8" y="-8" width="1692" height="1026" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33524683" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41374475" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -529,7 +487,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1744186" sideWeight="0.66475314" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17423312" sideWeight="0.66475314" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.325477" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -537,6 +495,7 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33524683" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -663,9 +622,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="48" column="0" selection-start="1621" selection-end="1621" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1407949081507" expanded="false" signature="921:932" placeholder="..." />
-            <marker date="1407949081507" expanded="false" signature="1203:1213" placeholder="..." />
-            <marker date="1407949081507" expanded="false" signature="1924:1936" placeholder="..." />
+            <marker date="1407949081507" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1407949081507" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1407949081507" expanded="false" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -677,26 +636,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Web3/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="1" selection-start="509" selection-end="509" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Web3/js/controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="168" column="18" selection-start="4988" selection-end="4989" vertical-scroll-proportion="-10.92">
+        <state line="96" column="54" selection-start="2866" selection-end="2866" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Web3/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="43" selection-start="946" selection-end="946" vertical-scroll-proportion="-13.68">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h1#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web3/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="16" selection-start="527" selection-end="527" vertical-scroll-proportion="0.6528029">
+        <state line="30" column="25" selection-start="1592" selection-end="1592" vertical-scroll-proportion="0.41707316">
           <folding />
         </state>
       </provider>

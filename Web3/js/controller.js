@@ -118,19 +118,32 @@ var resizeMainDiv = function (main) {
 
     var mainHeight = $(window).height() - headerSize - footerSize -2;
     var mainWidth = $(window).width();
+
+    var aspectWidth = mainHeight;
+    var left = 0;
+    if (mainWidth > aspectWidth) {
+        left = (mainWidth - aspectWidth)/2;
+        mainWidth = aspectWidth;
+    }
+
+    $(document).find('[data-role="header"]').css('width', mainWidth);
+    $(document).find('[data-role="header"]').css('left', left);
+    $(document).find('[data-role="footer"]').css('width', mainWidth);
+    $(document).find('[data-role="footer"]').css('left', left);
+
     $('#mainContainer').css('top', $(main).find('[data-role="header"]').height());
     $('#mainContainer').css('width', mainWidth);
     $('#mainContainer').css('height', mainHeight);
 
     $('#card1-container').css('top', 0);
-    $('#card1-container').css('left', 0);
+    $('#card1-container').css('left', left);
     $('#card2-container').css('top', 0);
-    $('#card2-container').css('left', mainWidth/2);
+    $('#card2-container').css('left', left + mainWidth/2);
     $('#card3-container').css('top', mainHeight/2);
-    $('#card3-container').css('left', 0);
+    $('#card3-container').css('left', left);
     $('#card4-container').css('top', mainHeight/2);
-    $('#card4-container').css('left', mainWidth/2);
-}
+    $('#card4-container').css('left', left + mainWidth/2);
+};
 
 var registerNumbers = function(num1, num2, t) {
 
